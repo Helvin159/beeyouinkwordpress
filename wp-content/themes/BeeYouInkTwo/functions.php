@@ -30,8 +30,8 @@ function maniac_files (){
       wp_enqueue_script('main-maniac-scripts', get_theme_file_uri('/bundled-assets/scripts.cd5e983b210d8417448c.js'), NULL, '1.0', true);
     }
 
-  wp_localize_script('main-bee-you-scripts', 'beeYouData', array(
-    'root_url' => get_site_url(),
+  wp_localize_script('main-maniac-scripts', 'maniacData', array(
+    'localhost:3001' => get_site_url(),
     'nonce' => wp_create_nonce('wp_rest')
   ));  
 
