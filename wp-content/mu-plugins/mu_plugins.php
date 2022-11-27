@@ -1,10 +1,10 @@
 <?php 
 
 function bee_you_ink_post_types(){
-    register_post_type('hero', array(
+  register_post_type('hero', array(
     'show_in_rest' => true,
     'supports' => array(
-        'title', 'editor', 'excerpt',
+        'title', 'excerpt',
       ),
     'public' => true,
     'labels'=>array(
@@ -33,7 +33,7 @@ function bee_you_ink_post_types(){
     'menu_icon' => 'dashicons-slides',
   ));
 
-register_post_type('testimonial', array(
+  register_post_type('testimonial', array(
     'public' => true,
     'labels'=>array(
       'name' => 'Testimonials',

@@ -1,6 +1,6 @@
 <?php
 
-
+// Files
 function beeyou_files(){
 
   // ************************************ 
@@ -54,7 +54,12 @@ function beeyou_files(){
 
 add_action('wp_enqueue_scripts', 'beeyou_files');
 
+// Features
+function beeyou_features(){
+  add_theme_support('title-tag');
+}
 
+add_action('after_setup_theme', 'beeyou_features');
 
 
 // Remove Admin Bar for All Other Users
