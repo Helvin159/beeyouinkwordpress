@@ -1,6 +1,9 @@
 <?php 
 
+
+
 function bee_you_ink_post_types(){
+
   register_post_type('hero', array(
     'show_in_rest' => true,
     'supports' => array(
@@ -17,12 +20,34 @@ function bee_you_ink_post_types(){
     'menu_icon' => 'dashicons-laptop',
   ));
   
+  register_post_type('components', array(
+    'show_in_rest' => true,
+    'supports' => array(
+        'title', 'excerpt',
+      ),
+    'public' => true,
+    'labels'=>array(
+      'name' => 'Components',
+      'add_new_item' => 'Add New Component',
+      'edit_items' => 'Edit Component',
+      'all_items' => 'All Components',
+      'singular_name' => 'Component',
+    ),
+    'menu_icon' => 'dashicons-index-card',
+    // 'capabilities'=> array(
+    // 'edit_post' => false,
+    // 'edit_published_posts'=> false,
+    // 'edit_private_posts' => false
+    // )
+  ));
+  
   register_post_type('articles', array(
       'show_in_rest' => true,
       'supports' => array(
         'title', 'editor', 'excerpt',
       ),
     'public' => true,
+    'has_archive'=>true,
     'labels'=>array(
       'name' => 'Articles',
       'add_new_item' => 'Add New Article',
@@ -42,6 +67,7 @@ function bee_you_ink_post_types(){
       'all_items' => 'All Testimonials',
       'singular_name' => 'Testimonial',
     ),
+    'has_archive'=>true,
     'menu_icon' => 'dashicons-groups',
     'show_in_rest' => true
   ));
@@ -56,8 +82,12 @@ function bee_you_ink_post_types(){
       'all_items' => 'All Tattoos',
       'singular_name' => 'Tattoo',
     ),
+    'has_archive'=>true,
     'menu_icon' => 'dashicons-admin-customizer',
   ));
+
+  remove_post_type_support('page', 'editor');
+
 }
 
 add_action('init', 'bee_you_ink_post_types');
