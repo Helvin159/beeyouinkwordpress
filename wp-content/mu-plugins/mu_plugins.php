@@ -7,7 +7,7 @@ function bee_you_ink_post_types(){
   register_post_type('hero', array(
     'show_in_rest' => true,
     'supports' => array(
-        'title', 'excerpt',
+        'title', 'excerpt','thumbnail'
       ),
     'public' => true,
     'labels'=>array(
@@ -44,7 +44,7 @@ function bee_you_ink_post_types(){
   register_post_type('articles', array(
       'show_in_rest' => true,
       'supports' => array(
-        'title', 'editor', 'excerpt',
+        'title', 'editor', 'excerpt','thumbnail'
       ),
     'public' => true,
     'has_archive'=>true,
@@ -60,6 +60,7 @@ function bee_you_ink_post_types(){
 
   register_post_type('testimonial', array(
     'public' => true,
+    'supports'=>array('title', 'editor', 'excerpt','thumbnail'),
     'labels'=>array(
       'name' => 'Testimonials',
       'add_new_item' => 'Add New Testimonial',
@@ -73,8 +74,11 @@ function bee_you_ink_post_types(){
   ));
   
   register_post_type('tattoo_work', array(
-      'show_in_rest' => true,
+    'show_in_rest' => true,
     'public' => true,
+    'supports'=>array(
+      'title', 'editor', 'excerpt','thumbnail'
+    ),
     'labels'=>array(
       'name' => 'Tattoos',
       'add_new_item' => 'Add New Tattoo',

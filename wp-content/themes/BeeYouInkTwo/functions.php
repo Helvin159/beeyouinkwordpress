@@ -20,6 +20,10 @@ function beeyou_files(){
 
 
 
+  // JS Build Folder Script
+  wp_enqueue_script('build-script', get_theme_file_uri('./build/index.js'), NULL,'1.0',true );
+
+
   // ************************************ 
   // ************************************ 
   // ******** Component Scripts *********
@@ -57,6 +61,9 @@ add_action('wp_enqueue_scripts', 'beeyou_files');
 // Features
 function beeyou_features(){
   add_theme_support('title-tag');
+  add_theme_support('post-thumbnails');
+
+  add_image_size('genericSquare', 300, 300, true);
 }
 
 add_action('after_setup_theme', 'beeyou_features');
