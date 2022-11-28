@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","mappings":";;;;;AAAAA,KAAK,CAAC,OAAO,CAAC,C","sources":["webpack://beeyouinktwo/./src/index.js"],"sourcesContent":["alert('money')\n"],"names":["alert"],"sourceRoot":""}

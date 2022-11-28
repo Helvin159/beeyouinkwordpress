@@ -1,2 +1,9 @@
 /themes/BeeYouInkTwo/node_modules
 /themes/BeeYouInkTwo/package-lock.json
+/themes/BeeYouInkTwo/BeeYouInkComponents/footer/node_modules
+/themes/BeeYouInkTwo/BeeYouInkComponents/header/node_modules
+/themes/BeeYouInkTwo/BeeYouInkComponents/hero/node_modules
+/themes/BeeYouInkTwo/BeeYouInkComponents/pagecollage/node_modules
+/themes/BeeYouInkTwo/BeeYouInkComponents/storytext/node_modules
+/themes/BeeYouInkTwo/BeeYouInkComponents/recentarticlescomponent/node_modules
+/themes/BeeYouInkTwo/BeeYouInkComponents/testimonials/node_modules

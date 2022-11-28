@@ -33,22 +33,22 @@ function beeyou_files(){
   wp_enqueue_script('header-component-script', get_theme_file_uri('./components/header.72b263c7.js'), NULL,'1.0',true );
 
   // Footer Script
-  wp_enqueue_script('footer-component-script', get_theme_file_uri('./components/footer.ebd39c87.js'), NULL,'1.0',true );
+  wp_enqueue_script('footer-component-script', get_theme_file_uri('./components/footer/static/js/main.8d8c88b6.js'), NULL,'1.0',true );
 
   // Testimonial Script
-  wp_enqueue_script('testimonial-component-script', get_theme_file_uri('./components/testimonials.38147750.js'), NULL,'1.0',true );
+  wp_enqueue_script('testimonial-component-script', get_theme_file_uri('./components/testimonials/static/js/main.38147750.js'), NULL,'1.0',true );
 
   // Hero Script
-  wp_enqueue_script('hero-component-script', get_theme_file_uri('./components/hero.260cd40b.js'), NULL,'1.0',true );
+  wp_enqueue_script('hero-component-script', get_theme_file_uri('./components/hero/static/js/main.2a02d8c2.js'), NULL,'1.0',true );
 
   // Recent Articles Script
-  wp_enqueue_script('recent_articles-component-script', get_theme_file_uri('./components/recentArticlesComponent.6593bd1f.js'), NULL,'1.0',true );  
+  wp_enqueue_script('recent_articles-component-script', get_theme_file_uri('./components/recentarticlescomponent/static/js/main.d7879dd4.js'), NULL,'1.0',true );  
 
   // Page Collage
-  wp_enqueue_script('page_collage-component-script', get_theme_file_uri('./components/pagecollage.bee60ba5.js'), NULL,'1.0',true );  
+  wp_enqueue_script('page_collage-component-script', get_theme_file_uri('./components/pagecollage/static/js/main.65557668.js'), NULL,'1.0',true );  
   
   // Story Text
-  wp_enqueue_script('story_text-component-script', get_theme_file_uri('./components/storytext.df89e1c6.js'), NULL,'1.0',true );  
+  wp_enqueue_script('story_text-component-script', get_theme_file_uri('./components/storytext/static/js/main.df89e1c6.js'), NULL,'1.0',true );  
 
   // Bootstrap Scripts
   wp_enqueue_script('bootstrap_script-component-script', '//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js', NULL,'1.0',true );
