@@ -1,0 +1,29 @@
+.loading-animation {
+	width: 100%;
+	height: 100%;
+	padding: 6rem 0;
+	margin: 0 auto;
+	text-align: center;
+
+	&__icon {
+		& img {
+			width: 100px;
+			height: 100px;
+			margin: 0 auto;
+			animation-name: loading-spinner;
+			animation-duration: 1.3s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-out;
+		}
+	}
+}
+
+@keyframes loading-spinner {
+	from {
+		transform: rotateZ(0deg);
+	}
+	to {
+		transform: rotateZ(360deg);
+	}
+}
+

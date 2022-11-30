@@ -1,0 +1,18 @@
+.portfolio-gallery {
+	&__col {
+		padding: 1rem;
+		&__card {
+			height: 100%;
+			border-radius: 1rem;
+			padding: 0.1rem 1rem;
+			box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+
+			&__img {
+				& img {
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,137 @@
+@font-face {
+	font-family: 'didot';
+	src: url('../assets/GFS_Didot/GFSDidot-Regular.ttf') format('truetype');
+}
+
+$primaryColor: rgb(0, 0, 0);
+$secondaryColor: rgb(197, 0, 0);
+$altColor: rgb(255, 255, 255);
+$fontFamily: didot;
+$secondaryFontFamily: didot;
+$linkTransition: ease 0.25s;
+$letterSpacing: 6px;
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $fontFamily;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	margin-bottom: 24px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+footer {
+	background-color: $primaryColor;
+	color: $altColor;
+}
+
+.font48 {
+	font-size: 48px;
+}
+
+.font-dark-gray {
+	color: rgb(133, 133, 133) !important;
+}
+
+.font-red {
+	color: $secondaryColor;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.h-90vh {
+	height: 90vh;
+}
+
+.h-100vh {
+	height: 100vh;
+}
+
+.w-100vw {
+	width: 100vw;
+}
+
+.maxW1024 {
+	max-width: 1024px;
+}
+
+.max-w-260 {
+	max-width: 260px;
+}
+
+.max-w-860 {
+	max-width: 860px;
+}
+
+.max-w-920 {
+	max-width: 920px;
+}
+
+.max-w-1024 {
+	max-width: 1024px;
+}
+
+.didot {
+	font-family: $fontFamily;
+}
+
+.didot-bold {
+	font-family: $fontFamily;
+	font-weight: 600;
+}
+
+.pl-5 {
+	padding-left: 1.25rem !important;
+}
+.pl-4 {
+	padding-left: 1rem !important;
+}
+.pl-3 {
+	padding-left: 0.75rem !important;
+}
+.pl-2 {
+	padding-left: 0.5rem !important;
+}
+.pl-1 {
+	padding-left: 0.25rem !important;
+}
+
+.pr-5 {
+	padding-right: 1.25rem !important;
+}
+.pr-4 {
+	padding-right: 1rem !important;
+}
+.pr-3 {
+	padding-right: 0.75rem !important;
+}
+.pr-2 {
+	padding-right: 0.5rem !important;
+}
+.pr-1 {
+	padding-right: 0.25rem !important;
+}
+

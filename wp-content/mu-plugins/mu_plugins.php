@@ -4,22 +4,6 @@
 
 function bee_you_ink_post_types(){
 
-  register_post_type('hero', array(
-    'show_in_rest' => true,
-    'supports' => array(
-        'title', 'excerpt','thumbnail'
-      ),
-    'public' => true,
-    'labels'=>array(
-      'name' => 'Hero',
-      'add_new_item' => 'Add New Hero Slide',
-      'edit_items' => 'Edit Hero Slide',
-      'all_items' => 'All Hero Slides',
-      'singular_name' => 'Hero Slide',
-    ),
-    'menu_icon' => 'dashicons-laptop',
-  ));
-  
   register_post_type('components', array(
     'show_in_rest' => true,
     'supports' => array(
@@ -40,11 +24,44 @@ function bee_you_ink_post_types(){
     // 'edit_private_posts' => false
     // )
   ));
+
+  register_post_type('hero', array(
+    'show_in_rest' => true,
+    'supports' => array(
+        'title', 'excerpt','thumbnail'
+      ),
+    'public' => true,
+    'labels'=>array(
+      'name' => 'Hero',
+      'add_new_item' => 'Add New Hero Slide',
+      'edit_items' => 'Edit Hero Slide',
+      'all_items' => 'All Hero Slides',
+      'singular_name' => 'Hero Slide',
+    ),
+    'menu_icon' => 'dashicons-laptop',
+  ));
+  
+  register_post_type('story_text', array(
+    'show_in_rest' => true,
+    'supports' => array(
+        'title', 'excerpt',
+      ),
+    'public' => true,
+    'labels'=>array(
+      'name' => 'Story Text',
+      'add_new_item' => 'Add New Story Text',
+      'edit_items' => 'Edit Story Text',
+      'all_items' => 'All Stories',
+      'singular_name' => 'Story Text',
+    ),
+    'menu_icon' => 'dashicons-text-page',
+    
+  ));
   
   register_post_type('articles', array(
       'show_in_rest' => true,
       'supports' => array(
-        'title', 'editor', 'excerpt','thumbnail'
+        'title', 'editor', 'excerpt',
       ),
     'public' => true,
     'has_archive'=>true,
@@ -77,7 +94,7 @@ function bee_you_ink_post_types(){
     'show_in_rest' => true,
     'public' => true,
     'supports'=>array(
-      'title', 'editor', 'excerpt','thumbnail'
+      'title', 'editor', 'excerpt',
     ),
     'labels'=>array(
       'name' => 'Tattoos',

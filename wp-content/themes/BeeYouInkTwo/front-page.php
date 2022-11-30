@@ -4,9 +4,9 @@ foreach($field as $v){
     $component_id = get_post($v->ID);
     $post = get_field('component_div_name', $component_id, false);
     $component_post_name = get_field('component_name', $component_id, false);
-?>
+    ?>
+    
     <div id="<?php echo $post?>" data-component="<?php echo $component_post_name ?>"></div>
-
 <?php }  
 get_footer(); 
 ?>
