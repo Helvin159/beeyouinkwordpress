@@ -5,23 +5,17 @@ import $ from 'jquery'
 import './assets/app.css'
 
 function App() {
-	const [data, setData] = useState([])
+	const [data, setData] = useState(null)
 
-	const rootUrl = window.location.href
-	console.log(rootUrl)
-
+	const rootUrl =
+		window.location.href !== 'beeyouink.local/'
+			? 'http://beeyouink.local/'
+			: window.location.href
 	useEffect(() => {
-		$.getJSON(
-			`${
-				rootUrl === 'localhost:3000' ? rootUrl : 'http://beeyouink.local/'
-			}wp-json/wp/v2/tattoo_work`,
-			(res) => {
-				setData(res)
-			}
-		)
+		$.getJSON(`${rootUrl}wp-json/wp/v2/tattoo_work`, (res) => {
+			setData(res)
+		})
 	}, [rootUrl])
-
-	console.log(data)
 
 	return data ? <PortfolioGallery props={data} /> : <Loading />
 }

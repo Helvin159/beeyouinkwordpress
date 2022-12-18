@@ -16,7 +16,7 @@ h6 {
   font-family: didot; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none !important; }
 
 p {
   margin-bottom: 24px; }
@@ -164,7 +164,7 @@ footer {
   padding: 6rem 0;
   margin: 0 auto;
   text-align: center; }
-  .loading-animation__icon img {
+  .loading-animation__icon .fa-spinner {
     width: 100px;
     height: 100px;
     margin: 0 auto;
@@ -232,7 +232,8 @@ footer .row {
     position: absolute;
     bottom: 7%;
     left: 5%;
-    color: white; }
+    color: white;
+    z-index: 1; }
     .slick-slider-hero__card__text p {
       letter-spacing: 6px;
       text-transform: uppercase;
