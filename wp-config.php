@@ -20,32 +20,17 @@
 
 
 // ** MySQL settings - You can get this info from your web host ** //
- if(strstr($_SERVER['SERVER_NAME'], 'beeyouink.local')){
-/** The name of the database for WordPress */
+ 
+if(strstr($_SERVER['SERVER_NAME'], 'beeyouink.local')){
 define( 'DB_NAME', 'local' );
-
-/** MySQL database username */
 define( 'DB_USER', 'root' );
-
-/** MySQL database password */
 define( 'DB_PASSWORD', 'root' );
-
-/** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
  }else{
-
-/** The name of the database for WordPress */
 define( 'DB_NAME', 'kmmkcamy_beeyouink' );
-
-/** MySQL database username */
 define( 'DB_USER', 'kmmkcamy_mrrymer' );
-
-/** MySQL database password */
 define( 'DB_PASSWORD', 'DoRa0411!?!' );
-
-/** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
-
 }
 
 /** Database Charset to use in creating database tables. */
