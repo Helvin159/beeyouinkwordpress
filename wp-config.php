@@ -41,7 +41,7 @@ define( 'DB_COLLATE', '' );
  }else{
 	// ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-// define( 'DB_NAME', 'kmmkcamy_beeyouink' );
+define( 'DB_NAME', 'kmmkcamy_beeyouink' );
 
 /** MySQL database username */
 define( 'DB_USER', 'kmmkcamy_mrrymer' );
