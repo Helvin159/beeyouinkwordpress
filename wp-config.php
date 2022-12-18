@@ -44,19 +44,19 @@ define( 'DB_COLLATE', '' );
 // define( 'DB_NAME', 'kmmkcamy_beeyouink' );
 
 /** MySQL database username */
-// define( 'DB_USER', 'kmmkcamy_mrrymer' );
+define( 'DB_USER', 'kmmkcamy_mrrymer' );
 
 /** MySQL database password */
-// define( 'DB_PASSWORD', 'DoRa0411!?!' );
+define( 'DB_PASSWORD', 'DoRa0411!?!' );
 
 /** MySQL hostname */
-// define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'localhost' );
 
 /** Database Charset to use in creating database tables. */
-// define( 'DB_CHARSET', 'utf8' );
+define( 'DB_CHARSET', 'utf8' );
 
 /** The Database Collate type. Don't change this if in doubt. */
-// define( 'DB_COLLATE', '' );
+define( 'DB_COLLATE', '' );
  }
 
 
