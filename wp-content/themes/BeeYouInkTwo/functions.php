@@ -44,7 +44,7 @@ function beeyou_files(){
   wp_enqueue_script('portfolio-gallery-component-script', get_theme_file_uri('./components/portfoliogallery/static/js/main.ced8a450.js'), NULL,'1.0',true );
 
   // Hero Script
-  wp_enqueue_script('hero-component-script', get_theme_file_uri('./components/hero/static/js/main.38500607.js'), NULL,'1.0',true );
+  wp_enqueue_script('hero-component-script', get_theme_file_uri('./components/hero/static/js/main.8050deab.js'), NULL,'1.0',true );
 
   // Recent Articles Script
   wp_enqueue_script('recent_articles-component-script', get_theme_file_uri('./components/recentarticlescomponent/static/js/main.ca163e83.js'), NULL,'1.0',true );  
@@ -60,7 +60,7 @@ function beeyou_files(){
 
 
 
-  // wp_localize_script()
+  wp_localize_script()
 
 
 }
