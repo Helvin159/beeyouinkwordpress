@@ -60,7 +60,9 @@ function beeyou_files(){
 
 
 
-  wp_localize_script()
+  wp_localize_script('hero-component-script','heroData',array(
+    'root_url' => get_site_url(),
+  ));
 
 
 }
