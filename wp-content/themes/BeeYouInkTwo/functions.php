@@ -23,7 +23,7 @@ function beeyou_files(){
   // ************************************ 
   // ******* JS Script ******************
   // ************************************ 
-  wp_enqueue_script('build-script', get_theme_file_uri('./build/index.js'), NULL,'1.0',true );
+  // wp_enqueue_script('build-script', get_theme_file_uri('./build/index.js'), NULL,'1.0',true );
 
   // Font Awesome
   // wp_enqueue_script('fontawesome-script', get_theme_file_uri('//kit.fontawesome.com/3f2d85e662.js'), NULL,'1.0',false );
