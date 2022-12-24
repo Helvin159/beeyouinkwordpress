@@ -47,10 +47,10 @@ function beeyou_files(){
   wp_enqueue_script('hero-component-script', get_theme_file_uri('./components/hero/static/js/main.87cd8445.js'), NULL,'1.0',true );
 
   // Recent Articles Script
-  wp_enqueue_script('recent_articles-component-script', get_theme_file_uri('./components/recentarticlescomponent/static/js/main.dde53231.js'), NULL,'1.0',true );  
+  wp_enqueue_script('recent_articles-component-script', get_theme_file_uri('./components/recentarticlescomponent/static/js/main.bd71ec98.js'), NULL,'1.0',true );  
 
   // Page Collage
-  wp_enqueue_script('page_collage-component-script', get_theme_file_uri('./components/pagecollage/static/js/main.a17c9c8d.js'), NULL,'1.0',true );  
+  wp_enqueue_script('page_collage-component-script', get_theme_file_uri('./components/pagecollage/static/js/main.c9967bad.js'), NULL,'1.0',true );  
   
   // Story Text
   wp_enqueue_script('story_text-component-script', get_theme_file_uri('./components/storytext/static/js/main.9f24623c.js'), NULL,'1.0',true );  
