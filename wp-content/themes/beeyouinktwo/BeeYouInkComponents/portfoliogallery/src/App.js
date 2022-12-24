@@ -10,9 +10,9 @@ function App() {
 	const rootUrl =
 		window.location.href !== 'beeyouink.local/'
 			? 'http://beeyouink.local/'
-			: window.location.href
+			: window.location.origin
 	useEffect(() => {
-		$.getJSON(`${rootUrl}wp-json/wp/v2/tattoo_work`, (res) => {
+		$.getJSON(`${rootUrl}/index.php/wp-json/wp/v2/tattoo_work`, (res) => {
 			setData(res)
 		})
 	}, [rootUrl])

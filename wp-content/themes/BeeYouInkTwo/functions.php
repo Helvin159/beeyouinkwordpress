@@ -41,7 +41,7 @@ function beeyou_files(){
   wp_enqueue_script('testimonial-component-script', get_theme_file_uri('./components/testimonials/static/js/main.db06d0c6.js'), NULL,'1.0',true );
   
   // Portfolio Gallery Script
-  wp_enqueue_script('portfolio-gallery-component-script', get_theme_file_uri('./components/portfoliogallery/static/js/main.ced8a450.js'), NULL,'1.0',true );
+  wp_enqueue_script('portfolio-gallery-component-script', get_theme_file_uri('./components/portfoliogallery/static/js/main.fc73de14.js'), NULL,'1.0',true );
 
   // Hero Script
   wp_enqueue_script('hero-component-script', get_theme_file_uri('./components/hero/static/js/main.3de7f79d.js'), NULL,'1.0',true );
