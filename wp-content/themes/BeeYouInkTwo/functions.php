@@ -44,16 +44,16 @@ function beeyou_files(){
   wp_enqueue_script('portfolio-gallery-component-script', get_theme_file_uri('./components/portfoliogallery/static/js/main.ced8a450.js'), NULL,'1.0',true );
 
   // Hero Script
-  wp_enqueue_script('hero-component-script', get_theme_file_uri('./components/hero/static/js/main.87cd8445.js'), NULL,'1.0',true );
+  wp_enqueue_script('hero-component-script', get_theme_file_uri('./components/hero/static/js/main.3de7f79d.js'), NULL,'1.0',true );
 
   // Recent Articles Script
-  wp_enqueue_script('recent_articles-component-script', get_theme_file_uri('./components/recentarticlescomponent/static/js/main.bd71ec98.js'), NULL,'1.0',true );  
+  wp_enqueue_script('recent_articles-component-script', get_theme_file_uri('./components/recentarticlescomponent/static/js/main.a7246781.js'), NULL,'1.0',true );  
 
   // Page Collage
-  wp_enqueue_script('page_collage-component-script', get_theme_file_uri('./components/pagecollage/static/js/main.c9967bad.js'), NULL,'1.0',true );  
+  wp_enqueue_script('page_collage-component-script', get_theme_file_uri('./components/pagecollage/static/js/main.5fe7282d.js'), NULL,'1.0',true );  
   
   // Story Text
-  wp_enqueue_script('story_text-component-script', get_theme_file_uri('./components/storytext/static/js/main.9f24623c.js'), NULL,'1.0',true );  
+  wp_enqueue_script('story_text-component-script', get_theme_file_uri('./components/storytext/static/js/main.f33ad944.js'), NULL,'1.0',true );  
 
   // Bootstrap Scripts
   wp_enqueue_script('bootstrap_script-component-script', '//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js', NULL,'1.0',true );
