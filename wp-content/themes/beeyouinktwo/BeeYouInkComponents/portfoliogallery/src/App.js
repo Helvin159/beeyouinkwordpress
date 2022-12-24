@@ -8,7 +8,7 @@ function App() {
 	const [data, setData] = useState(null)
 
 	const rootUrl =
-		window.location.href !== 'beeyouink.local/'
+		window.location.href === 'http://beeyouink.local/'
 			? 'http://beeyouink.local/'
 			: window.location.origin
 	useEffect(() => {
