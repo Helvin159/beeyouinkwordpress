@@ -53,7 +53,7 @@ function beeyou_files(){
   wp_enqueue_script('page_collage-component-script', get_theme_file_uri('./components/pagecollage/static/js/main.a17c9c8d.js'), NULL,'1.0',true );  
   
   // Story Text
-  wp_enqueue_script('story_text-component-script', get_theme_file_uri('./components/storytext/static/js/main.0ce5c225.js'), NULL,'1.0',true );  
+  wp_enqueue_script('story_text-component-script', get_theme_file_uri('./components/storytext/static/js/main.0d24f8fe.js'), NULL,'1.0',true );  
 
   // Bootstrap Scripts
   wp_enqueue_script('bootstrap_script-component-script', '//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js', NULL,'1.0',true );
