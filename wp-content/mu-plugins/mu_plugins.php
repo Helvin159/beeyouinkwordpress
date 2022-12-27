@@ -106,6 +106,23 @@ function bee_you_ink_post_types(){
     'has_archive'=>true,
     'menu_icon' => 'dashicons-admin-customizer',
   ));
+  
+  register_post_type('team', array(
+    'show_in_rest' => true,
+    'public' => true,
+    'supports'=>array(
+      'title', 'editor', 'excerpt',
+    ),
+    'labels'=>array(
+      'name' => 'Team',
+      'add_new_item' => 'Add New Team Member',
+      'edit_items' => 'Edit Team Member',
+      'all_items' => 'All Team Members',
+      'singular_name' => 'Team Member',
+    ),
+    'has_archive'=>true,
+    'menu_icon' => 'dashicons-groups',
+  ));
 
   remove_post_type_support('page', 'editor');
 
