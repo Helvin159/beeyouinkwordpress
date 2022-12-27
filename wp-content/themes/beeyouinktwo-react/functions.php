@@ -17,7 +17,7 @@ function beeyou_files(){
   wp_enqueue_style('styles', get_theme_file_uri('./static/css/main.1d2ea062.css.map'));
   
   // Bootstrap CSS
-  wp_enqueue_style('bootstrap', '//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
+  wp_enqueue_style('bootstrap', '//cdn.jsdelivr.snet/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
 
   // Slick Slider CSS
   wp_enqueue_style('slick-slider', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
