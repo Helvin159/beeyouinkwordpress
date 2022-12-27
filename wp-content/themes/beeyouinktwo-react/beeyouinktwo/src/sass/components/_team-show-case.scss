@@ -1,0 +1,32 @@
+.team-showcase {
+	&__team-cards {
+		&__card {
+			position: relative;
+			&__inner {
+				position: relative;
+				&__member-info {
+					position: relative;
+					top: 85%;
+					padding: 1rem 0 1rem 0.5rem;
+					color: $altColor;
+
+					a {
+						color: $altColor;
+						text-transform: capitalize;
+						transition: $linkTransition;
+					}
+
+					p {
+						letter-spacing: $letterSpacing;
+						text-transform: uppercase;
+						font-size: 10px;
+					}
+					a:hover {
+						color: $secondaryColor;
+					}
+				}
+			}
+		}
+	}
+}
+

@@ -1,5 +1,8 @@
 /themes/BeeYouInkTwo/node_modules
+/themes/BeeYouInkTwo/BeeYouInkComponents
+./BeeYouInkComponents
 /themes/beeyouinktwo-react/node_modules
+/themes/beeyouinktwo-react/beeyouinktwo/node_modules
 /themes/BeeYouInkTwo/package-lock.json
 /themes/beeyouinktwo-react/package-lock.json
 /themes/BeeYouInkTwo/BeeYouInkComponents/footer/node_modules
