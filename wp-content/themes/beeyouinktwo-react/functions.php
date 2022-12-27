@@ -29,28 +29,13 @@ function beeyou_files(){
   // ************************************ 
   // ******* JS Script ******************
   // ************************************ 
-  // wp_enqueue_script('build-script', get_theme_file_uri('./build/index.js'), NULL,'1.0',true );
 
-  // Font Awesome
-  // wp_enqueue_script('fontawesome-script', get_theme_file_uri('//kit.fontawesome.com/3f2d85e662.js'), NULL,'1.0',false );
-
-  // ************************************ 
-  // ******* Components *****************
-  // ************************************ 
   // Main Script
-  wp_enqueue_script('header-component-script', get_theme_file_uri('./static/js/main.6e9dfd4d.js'), NULL,'1.0',true );
+  wp_enqueue_script('main-script', get_theme_file_uri('./static/js/main.347e453c.js'), NULL,'1.0',true );
 
 
   // Bootstrap Scripts
   wp_enqueue_script('bootstrap_script-component-script', '//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js', NULL,'1.0',true );
-
-
-
-  wp_localize_script('hero-component-script','heroData',array(
-    'root_url' => get_site_url(),
-  ));
-
-
 }
 
 add_action('wp_enqueue_scripts', 'beeyou_files');
