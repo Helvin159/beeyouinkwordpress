@@ -14,7 +14,7 @@ const Home = ({ props, wpData }) => {
 			<TestimonialsComponent wpData={wpData.testimonials} />
 			<PageCollage featuredPages={props.pages.collage_pages} wpData={wpData} />
 			<StoryTextComponent wpData={wpData.story_text} />
-			<TeamShowCaseComponent props={props.team} />
+			<TeamShowCaseComponent wpData={wpData.team} />
 		</Fragment>
 	)
 }

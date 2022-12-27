@@ -4,11 +4,11 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-const TeamShowCaseComponent = ({ props }) => {
+const TeamShowCaseComponent = ({ wpData }) => {
 	return (
 		<Fragment>
 			<style>{`
-			${props
+			${wpData
 				.map(
 					(i, k) =>
 						`.team-showcase__team-cards__card__${k}{
@@ -22,7 +22,7 @@ const TeamShowCaseComponent = ({ props }) => {
 		`}</style>
 			<Container fluid className='team-showcase'>
 				<Row className='no-gutters team-showcase__team-cards'>
-					{props.map((i, k) => (
+					{wpData.map((i, k) => (
 						<Col sm={4} key={k} className='team-showcase__team-cards__card p-1'>
 							<div
 								className={`team-showcase__team-cards__card__${k} team-showcase__team-cards__card__inner p-3`}>

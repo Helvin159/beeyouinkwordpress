@@ -50,7 +50,8 @@ function beeYouInkData($data){
     wp_reset_query();
     
     $team = new WP_Query(array(
-        'post_type' => 'team'
+        'post_type' => 'team',
+        'order'=>'DESC'
     ));
     wp_reset_query();
 
@@ -72,7 +73,8 @@ function beeYouInkData($data){
         'story_text'=>array(),
         'articles'=>array(),
         'testimonials'=>array(),
-        'tattoo_work'=>array()
+        'tattoo_work'=>array(),
+        'team'=>array()
     );
 
 
@@ -168,8 +170,12 @@ function beeYouInkData($data){
     while($team->have_posts()){
         $team->the_post();
         array_push($results['team'], array(
-            'title'=>get_the_title(),      
-            'content' =>get_the_content(),
+            'name'=>get_the_title(),
+            'position'=>get_field('position'),
+            'about' =>get_the_content(),
+            'img_url' =>get_the_post_thumbnail_url(),
+            'profile_url'=>get_the_permalink(),
+            'social_media'
         ));
     }
 

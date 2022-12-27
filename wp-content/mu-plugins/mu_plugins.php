@@ -111,7 +111,7 @@ function bee_you_ink_post_types(){
     'show_in_rest' => true,
     'public' => true,
     'supports'=>array(
-      'title', 'editor', 'excerpt',
+      'title', 'editor', 'excerpt','thumbnail'
     ),
     'labels'=>array(
       'name' => 'Team',
