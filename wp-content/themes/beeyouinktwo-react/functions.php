@@ -13,7 +13,7 @@ function beeyou_files(){
   // ******* CSS FILES ******************
   // ************************************ 
   // My Style
-  wp_enqueue_style('styles', get_theme_file_uri('./static/css/main.1d2ea062.css'));
+  wp_enqueue_stylxe('styles', get_theme_file_uri('./static/css/main.1d2ea062.css'));
   wp_enqueue_style('styles', get_theme_file_uri('./static/css/main.1d2ea062.css.map'));
   
   // Bootstrap CSS
