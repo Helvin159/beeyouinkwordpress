@@ -1,5 +1,9 @@
 <?php
 
+// ROUTES
+require get_theme_file_path('../../beeyouink-includes/routes.php');
+
+
 // Files
 function beeyou_files(){
 

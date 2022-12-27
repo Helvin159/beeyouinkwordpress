@@ -1,0 +1,67 @@
+.PageCollagecomponent {
+	& .small-cards {
+		min-height: 15rem;
+		height: 18rem !important;
+		width: 100%;
+
+		position: relative;
+		&__text {
+			position: relative;
+			top: 80%;
+			left: 15%;
+
+			& a {
+				height: 100%;
+				width: 100%;
+				color: $altColor;
+				transition: $linkTransition;
+			}
+
+			& a:hover {
+				color: $secondaryColor;
+			}
+		}
+	}
+
+	& .big-card {
+		position: relative;
+		&__text {
+			position: relative;
+			top: 85%;
+			left: 10%;
+		}
+
+		& a {
+			height: 100%;
+			width: 100%;
+			color: $altColor;
+			transition: $linkTransition;
+		}
+
+		& a:hover {
+			color: $secondaryColor;
+		}
+	}
+
+	& .big-card,
+	& .small-cards {
+		background-size: cover;
+		background-position: center center;
+		height: 100%;
+		position: relative;
+	}
+
+	@media (max-width: 575px) {
+		& .big-card {
+			display: none;
+		}
+	}
+
+	// & .big-card:hover,
+	// & .small-cards:hover {
+	// 	transition: $linkTransition;
+	// 	background-size: contain;
+	// 	background-position: right;
+	// }
+}
+

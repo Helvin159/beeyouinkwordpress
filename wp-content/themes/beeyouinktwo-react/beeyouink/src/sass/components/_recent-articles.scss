@@ -1,0 +1,80 @@
+.recent-articles {
+	overflow: hidden;
+
+	@media (min-width: 576px) {
+		padding: 10rem 0 10rem 10rem;
+	}
+
+	&__header {
+		padding: 1rem 0;
+
+		& .row {
+			& .col-10 {
+				@media (min-width: 576px) {
+					padding-right: 30rem;
+				}
+				& p {
+					margin: 0 0 0 0;
+					letter-spacing: $letterSpacing;
+					text-transform: uppercase;
+					font-size: 12px;
+					color: $secondaryColor;
+				}
+			}
+		}
+	}
+
+	&__wrapper {
+		padding: 1rem 0;
+
+		&__slider {
+			&__row {
+				padding: 0 1.3rem;
+				box-shadow: 1px 1px 8px rgba(0, 0, 0, 1);
+
+				&__left-card {
+					padding: 1rem 1rem 2rem 1.5rem;
+					background-color: rgb(245, 245, 245);
+					color: $primaryColor;
+
+					& h4 {
+						padding: 1rem 0 1rem 0;
+						height: 7rem;
+						overflow: scroll;
+					}
+
+					.left-card-date {
+						margin: 0 0 4rem 0;
+						font-size: 12px;
+						color: $secondaryColor;
+						text-transform: uppercase;
+						letter-spacing: 4px;
+
+						& .month-span {
+							letter-spacing: $letterSpacing !important;
+						}
+					}
+
+					& a {
+						color: $primaryColor;
+						transition: $linkTransition;
+						text-transform: uppercase;
+						font-size: 12px;
+					}
+
+					& a:hover {
+						color: $secondaryColor;
+					}
+				}
+
+				&__right-card {
+					& img {
+						width: 100%;
+						max-width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
