@@ -48,6 +48,11 @@ function beeYouInkData($data){
         'post_type' => 'tattoo_work'
     ));
     wp_reset_query();
+    
+    $team = new WP_Query(array(
+        'post_type' => 'team'
+    ));
+    wp_reset_query();
 
 
     $results = array(
@@ -157,6 +162,14 @@ function beeYouInkData($data){
             'tatt_shots_one' => get_field('tatt_shots_one'),
             'tatt_shots_two' => get_field('tatt_shots_two'),
             'show_tattoo_in_gallery' => get_field('show_tattoo_in_gallery'),
+        ));
+    }
+    
+    while($team->have_posts()){
+        $team->the_post();
+        array_push($results['team'], array(
+            'title'=>get_the_title(),      
+            'content' =>get_the_content(),
         ));
     }
 
