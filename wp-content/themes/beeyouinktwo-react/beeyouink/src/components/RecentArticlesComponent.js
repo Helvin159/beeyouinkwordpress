@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Slider from 'react-slick'
 
-const RecentArticlesComponent = ({ props, wpData }) => {
+const RecentArticlesComponent = ({ wpData }) => {
 	const settings = {
 		dots: false,
 		infinite: true,
@@ -41,8 +41,8 @@ const RecentArticlesComponent = ({ props, wpData }) => {
 				<div className='recent-articles__header'>
 					<Row>
 						<Col className='col-10'>
-							<p>{props.category}</p>
-							<h3>{props.headline}</h3>
+							<p>News</p>
+							<h3>Everything you need to know about tattoos</h3>
 						</Col>
 						<Col className='col-2'>arrows</Col>
 					</Row>

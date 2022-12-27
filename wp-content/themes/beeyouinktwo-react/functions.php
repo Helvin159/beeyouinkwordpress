@@ -31,7 +31,7 @@ function beeyou_files(){
   // ************************************ 
 
   // Main Script
-  wp_enqueue_script('main-script', get_theme_file_uri('./static/js/main.347e453c.js'), NULL,'1.0',true );
+  wp_enqueue_script('main-script', get_theme_file_uri('./static/js/main.788e7f16.js'), NULL,'1.0',true );
 
 
   // Bootstrap Scripts

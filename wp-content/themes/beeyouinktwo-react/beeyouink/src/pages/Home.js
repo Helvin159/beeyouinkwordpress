@@ -9,11 +9,8 @@ import TestimonialsComponent from '../components/TestimonialsComponent/Testimoni
 const Home = ({ props, wpData }) => {
 	return (
 		<Fragment>
-			<Hero props={props} />
-			<RecentArticlesComponent
-				props={props.home.recent_articles_component}
-				wpData={wpData.articles}
-			/>
+			<Hero wpData={wpData.hero} />
+			<RecentArticlesComponent wpData={wpData.articles} />
 			<TestimonialsComponent wpData={wpData.testimonials} />
 			<PageCollage featuredPages={props.pages.collage_pages} wpData={wpData} />
 			<StoryTextComponent wpData={wpData.story_text} />
