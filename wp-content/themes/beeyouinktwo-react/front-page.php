@@ -1,7 +1,5 @@
-<?php wp_head(); ?> 
+<?php get_header(); ?> 
 
 <div id="main"></div>
 
-<?php 
-wp_footer(); 
-?>
+<?php get_footer(); ?>
