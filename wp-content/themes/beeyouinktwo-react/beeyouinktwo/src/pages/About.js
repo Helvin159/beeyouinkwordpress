@@ -4,13 +4,13 @@ import PageCollage from '../components/PageCollage'
 import RecentArticlesComponent from '../components/RecentArticlesComponent'
 import TestimonialsComponent from '../components/TestimonialsComponent/TestimonialsComponent'
 
-const About = ({ props }) => {
+const About = ({ props, wpData }) => {
 	return (
 		<Fragment>
-			<Hero props={props} />
-			<TestimonialsComponent props={props} />
-			<PageCollage featuredPages={props.pages.collage_pages} />
-			<RecentArticlesComponent props={props.home.recent_articles_component} />
+			<Hero wpData={wpData.hero} />
+			<TestimonialsComponent wpData={wpData.testimonials} />
+			<PageCollage featuredPages={props.pages.collage_pages} wpData={wpData} />
+			<RecentArticlesComponent wpData={wpData.articles} />
 		</Fragment>
 	)
 }

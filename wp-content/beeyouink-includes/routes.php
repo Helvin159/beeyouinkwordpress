@@ -143,7 +143,8 @@ function beeYouInkData($data){
             'article_image' => get_field('article_image'),
             'url'=>get_the_permalink(),
             'post_id'=>get_the_ID(),
-            'slug'=>$post->post_name
+            'slug'=>$post->post_name,
+            'slug_namespace' => 'article/'
         ));
     }
 
@@ -157,6 +158,7 @@ function beeYouInkData($data){
     
     while($tattooWork->have_posts()){
         $tattooWork->the_post();
+        $tattooWork->the_post();
         array_push($results['tattoo_work'], array(
             'title'=>get_the_title(),      
             'content' =>get_the_content(),
@@ -164,6 +166,8 @@ function beeYouInkData($data){
             'tatt_shots_one' => get_field('tatt_shots_one'),
             'tatt_shots_two' => get_field('tatt_shots_two'),
             'show_tattoo_in_gallery' => get_field('show_tattoo_in_gallery'),
+            'slug'=> $post->post_name,
+            'slug_namespace' => 'tattoo/'
         ));
     }
     

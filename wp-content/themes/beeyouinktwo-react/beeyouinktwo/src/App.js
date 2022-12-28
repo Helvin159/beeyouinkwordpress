@@ -4,13 +4,15 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Portfolio from './pages/Portfolio'
 import ContactUs from './pages/ContactUs'
-import Pricing from './pages/Pricing'
-import Faq from './pages/Faq'
+// import Pricing from './pages/Pricing'
+// import Faq from './pages/Faq'
 import Blog from './pages/Blog'
 import ScrollToTop from './lib/ScrollToTop'
 import Outlet from './pages/Outlet'
 import axios from 'axios'
 import MyData from './lib/data.json'
+import TattooArchiveSingle from './pages/TattooArchiveSingle'
+import ArticleArchiveSingle from './pages/ArticleArchiveSingle'
 
 const App = () => {
 	const [MyWpData, setMyWpData] = useState(null)
@@ -42,8 +44,6 @@ const App = () => {
 
 	if (MyWpData) {
 		if (MyWpData.status === 200) {
-			// console.log(MyWpData.data, 'wp data')
-
 			return (
 				<Fragment>
 					<ScrollToTop>
@@ -56,12 +56,76 @@ const App = () => {
 									path='/'
 									element={<Home props={MyData} wpData={MyWpData.data} />}
 								/>
-								<Route path='/about' element={<About props={MyData} />}></Route>
-								<Route path='/portfolio' element={<Portfolio />}></Route>
-								<Route path='/contact-us' element={<ContactUs />}></Route>
-								<Route path='/pricing' element={<Pricing />}></Route>
-								<Route path='/faq' element={<Faq />}></Route>
-								<Route path='/blog' element={<Blog />}></Route>
+
+								{MyWpData.data.pages.all_pages.map((i, k) =>
+									i.page.toLowerCase() === 'home' ? (
+										<Route
+											index
+											path='/'
+											element={<Home props={MyData} wpData={MyWpData.data} />}
+											key={k}
+										/>
+									) : i.page.toLowerCase() === 'about' ? (
+										<Route
+											path={`/${i.page.toLowerCase()}`}
+											element={<About props={MyData} wpData={MyWpData.data} />}
+											key={k}
+										/>
+									) : i.page.toLowerCase() === 'portfolio' ? (
+										<Route
+											path={`/${i.page.toLowerCase()}`}
+											element={
+												<Portfolio
+													props={MyData}
+													wpData={MyWpData.data.tattoo_work}
+												/>
+											}
+											key={k}
+										/>
+									) : i.page.toLowerCase() === 'blog' ? (
+										<Route
+											path={`/${i.page.toLowerCase()}`}
+											element={<Blog />}
+											key={k}
+										/>
+									) : (
+										<Route
+											path={`/${i.page.toLowerCase()}`}
+											element={<ContactUs />}
+											key={k}
+										/>
+									)
+								)}
+
+								{
+									// Tatto Post Type Archive Pages
+									MyWpData.data.tattoo_work.map((i, k) => (
+										<Route
+											path={`/portfolio/${i.slug}`}
+											element={
+												<TattooArchiveSingle
+													wpData={MyWpData.data.tattoo_work[k]}
+												/>
+											}
+											key={k}
+										/>
+									))
+								}
+
+								{
+									// Article Post Type Archive Pages
+									MyWpData.data.articles.map((i, k) => (
+										<Route
+											path={`/article/${i.slug}`}
+											element={
+												<ArticleArchiveSingle
+													wpData={MyWpData.data.articles[k]}
+												/>
+											}
+											key={k}
+										/>
+									))
+								}
 							</Route>
 						</Routes>
 					</ScrollToTop>
