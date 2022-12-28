@@ -42,12 +42,15 @@ const App = () => {
 
 	if (MyWpData) {
 		if (MyWpData.status === 200) {
-			console.log(MyWpData)
+			// console.log(MyWpData.data, 'wp data')
+
 			return (
 				<Fragment>
 					<ScrollToTop>
 						<Routes>
-							<Route path='/' element={<Outlet props={MyData} />}>
+							<Route
+								path='/'
+								element={<Outlet props={MyData} wpData={MyWpData.data} />}>
 								<Route
 									index
 									path='/'
@@ -57,15 +60,15 @@ const App = () => {
 								<Route path='/portfolio' element={<Portfolio />}></Route>
 								<Route path='/contact-us' element={<ContactUs />}></Route>
 								<Route path='/pricing' element={<Pricing />}></Route>
-								<Route path='/shop' element={<Home props={MyData} />}></Route>
 								<Route path='/faq' element={<Faq />}></Route>
 								<Route path='/blog' element={<Blog />}></Route>
-								<Route path='/landing' element={<Home />}></Route>
 							</Route>
 						</Routes>
 					</ScrollToTop>
 				</Fragment>
 			)
+		} else {
+			return null
 		}
 	}
 }

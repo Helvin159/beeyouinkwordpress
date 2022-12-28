@@ -4,30 +4,32 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-const PageCollage = ({ featuredPages }) => {
+const PageCollage = ({ featuredPages, wpData }) => {
 	// const isOdd = (num) => {
 	// 	return num % 2 === 1 ? true : false
 	// }
+
+	console.log(wpData, 'pagecollage')
 
 	return (
 		<Fragment>
 			<style>
 				{`
-					.card-${featuredPages.single.page}{
-						background:url(${featuredPages.single.img_url})
+					.card-${wpData.pages.collage_pages.single[0].page}{
+						background:url(${wpData.pages.collage_pages.single[0].featured_image})
 
 
 					}
 
-					${featuredPages.quad
+					${wpData.pages.featured_pages
 						.map(
 							(i, k) => `
 							.card-${k}{
 								
 								${
 									k === 1 || k === 2
-										? `background:linear-gradient(180deg,rgba(0,0,0,0.5), rgba(0,0,0,1)), url(${i.img_url});`
-										: `background:url(${i.img_url});`
+										? `background:linear-gradient(180deg,rgba(0,0,0,0.5), rgba(0,0,0,1)), url(${i.featured_image});`
+										: `background:url(${i.featured_image});`
 								}
 								margin:${
 									k === 0
@@ -58,8 +60,8 @@ const PageCollage = ({ featuredPages }) => {
 					<Col sm={6} className='d-xs-none'>
 						<div className={`big-card card-${featuredPages.single.page}`}>
 							<div className='big-card__text'>
-								<Link to={featuredPages.single.url}>
-									<h3>{featuredPages.single.page}</h3>
+								<Link to={wpData.pages.collage_pages.single[0].url}>
+									<h3>{wpData.pages.collage_pages.single[0].page}</h3>
 								</Link>
 							</div>
 						</div>
@@ -67,7 +69,7 @@ const PageCollage = ({ featuredPages }) => {
 
 					<Col sm={6} className='small-cards-wrapper p-0'>
 						<Row>
-							{featuredPages.quad.map(
+							{wpData.pages.featured_pages.map(
 								(i, k) =>
 									k <= 3 && (
 										<Col sm={6} className='p-0' key={`${k}-${i.page} `}>

@@ -38,7 +38,7 @@ function beeyou_files(){
   // ******* Components *****************
   // ************************************ 
   // Main Script
-  wp_enqueue_script('header-component-script', get_theme_file_uri('./static/js/main.aa540482.js'), NULL,'1.0',true );
+  wp_enqueue_script('beeYouData-script', get_theme_file_uri('./static/js/main.2a23288e.js'), NULL,'1.0',true );
 
 
   // Bootstrap Scripts
@@ -46,7 +46,7 @@ function beeyou_files(){
 
 
 
-  wp_localize_script('hero-component-script','heroData',array(
+  wp_localize_script('beeYouData-script','BeeYouData',array(
     'root_url' => get_site_url(),
   ));
 

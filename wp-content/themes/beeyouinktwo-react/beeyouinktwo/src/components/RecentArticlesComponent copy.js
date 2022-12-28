@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col'
 import Slider from 'react-slick'
 
 const RecentArticlesComponent = ({ props, wpData }) => {
-	console.log(wpData, 'recentarticls')
+	// console.log(wpData, 'recentarticls')
 
 	const settings = {
 		dots: false,

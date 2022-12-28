@@ -7,7 +7,7 @@ const Footer = ({ props }) => {
 	const { tattoo_shop_details, pages } = props
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		console.log(e.target)
+		// console.log(e.target)
 	}
 
 	return (

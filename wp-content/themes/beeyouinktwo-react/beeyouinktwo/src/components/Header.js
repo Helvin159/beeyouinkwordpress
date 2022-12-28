@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/esm/Col'
 
-function Header({ props }) {
+function Header({ props, wpData }) {
 	return (
 		<header className='navigation'>
 			<Row>
