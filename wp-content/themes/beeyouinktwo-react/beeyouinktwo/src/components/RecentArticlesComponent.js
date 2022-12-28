@@ -62,7 +62,7 @@ const RecentArticlesComponent = ({ wpData }) => {
 												{`${month} · `}
 												<span className='month-span'>{`${day}`}</span>
 											</p>
-											<Link to={i.slug}>
+											<Link to={`article/${i.slug}`}>
 												Read more <span>{' >'}</span>
 											</Link>
 										</Col>

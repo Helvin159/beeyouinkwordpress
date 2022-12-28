@@ -137,10 +137,14 @@ function beeYouInkData($data){
     while($articles->have_posts()){
         $articles->the_post();
         global $post;
+        global $author_id;
         array_push($results['articles'], array(
             'title'=>get_the_title(),      
             'article_date' => get_field('article_date'),
             'article_image' => get_field('article_image'),
+            'author_first_name'=>get_the_author_meta('first_name'),
+            'author_last_name'=>get_the_author_meta('last_name'),
+            'content'=>get_the_content(),
             'url'=>get_the_permalink(),
             'post_id'=>get_the_ID(),
             'slug'=>$post->post_name,
