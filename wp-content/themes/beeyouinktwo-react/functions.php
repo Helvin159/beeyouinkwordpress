@@ -38,7 +38,7 @@ function beeyou_files(){
   // ******* Components *****************
   // ************************************ 
   // Main Script
-  wp_enqueue_script('beeYouData-script', get_theme_file_uri('./static/js/main.d8170400.js'), NULL,'1.0',true );
+  wp_enqueue_script('beeYouData-script', get_theme_file_uri('./static/js/main.c8d2d10b.js'), NULL,'1.0',true );
 
 
   // Bootstrap Scripts
