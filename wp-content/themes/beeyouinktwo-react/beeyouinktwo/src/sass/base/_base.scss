@@ -72,6 +72,18 @@ footer {
 	}
 }
 
+.aligncenter {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.align {
+	&center {
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
 .h {
 	&-90vh {
 		height: 90vh;

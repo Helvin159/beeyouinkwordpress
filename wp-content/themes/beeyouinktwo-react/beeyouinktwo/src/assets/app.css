@@ -46,6 +46,14 @@ footer {
 .text-right {
   text-align: right; }
 
+.aligncenter {
+  margin: 0 auto;
+  text-align: center; }
+
+.aligncenter {
+  margin: 0 auto;
+  text-align: center; }
+
 .h-90vh {
   height: 90vh; }
 
