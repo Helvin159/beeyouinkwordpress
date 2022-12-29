@@ -1,8 +1,12 @@
 import React from 'react'
+import { PageContext } from '../../lib/pageContext'
+import { useContext } from 'react'
 import Container from 'react-bootstrap/Container'
 import Slider from 'react-slick'
 
-const TestimonialsComponent = ({ wpData }) => {
+const TestimonialsComponent = () => {
+	const { pageData } = useContext(PageContext)
+
 	const settings = {
 		dots: false,
 		infinite: true,
@@ -19,7 +23,7 @@ const TestimonialsComponent = ({ wpData }) => {
 		<Container className='testimonials' fluid>
 			<div className='testimonials__wrapper max-w-860 mx-auto '>
 				<Slider className='testimonials__slider' {...settings}>
-					{wpData.map((i, k) => (
+					{pageData.data.testimonials.map((i, k) => (
 						<div
 							key={k}
 							className='testimonials__slider__slide text-center p-5 px-xs-0 mx-auto'>

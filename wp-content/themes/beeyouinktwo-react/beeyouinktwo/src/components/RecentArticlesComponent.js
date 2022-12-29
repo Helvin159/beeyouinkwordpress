@@ -1,11 +1,14 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useContext } from 'react'
+import { PageContext } from '../lib/pageContext'
 import { Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Slider from 'react-slick'
 
-const RecentArticlesComponent = ({ wpData }) => {
+const RecentArticlesComponent = () => {
+	const { pageData } = useContext(PageContext)
+
 	const settings = {
 		dots: false,
 		infinite: true,
@@ -23,7 +26,7 @@ const RecentArticlesComponent = ({ wpData }) => {
 	return (
 		<Fragment>
 			<style>{`
-			${wpData
+			${pageData.data.articles
 				.map(
 					(i, k) =>
 						`
@@ -49,7 +52,7 @@ const RecentArticlesComponent = ({ wpData }) => {
 				</div>
 				<div className='recent-articles__wrapper'>
 					<Slider className='recent-articles__wrapper__slider' {...settings}>
-						{wpData.map((i, k) => {
+						{pageData.data.articles.map((i, k) => {
 							const date = new Date(i.article_date)
 							const day = date.getDate()
 							const month = date.toLocaleString('default', { month: 'short' })

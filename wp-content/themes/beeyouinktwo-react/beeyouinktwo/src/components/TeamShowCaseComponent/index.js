@@ -3,12 +3,16 @@ import { Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { useContext } from 'react'
+import { PageContext } from '../../lib/pageContext'
 
-const TeamShowCaseComponent = ({ wpData }) => {
+const TeamShowCaseComponent = () => {
+	const { pageData } = useContext(PageContext)
+
 	return (
 		<Fragment>
 			<style>{`
-			${wpData
+			${pageData.data.team
 				.map(
 					(i, k) =>
 						`.team-showcase__team-cards__card__${k}{
@@ -22,7 +26,7 @@ const TeamShowCaseComponent = ({ wpData }) => {
 		`}</style>
 			<Container fluid className='team-showcase'>
 				<Row className='no-gutters team-showcase__team-cards'>
-					{wpData.map((i, k) => (
+					{pageData.data.team.map((i, k) => (
 						<Col sm={4} key={k} className='team-showcase__team-cards__card p-1'>
 							<div
 								className={`team-showcase__team-cards__card__${k} team-showcase__team-cards__card__inner p-3`}>

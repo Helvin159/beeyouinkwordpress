@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { PageContext } from '../lib/pageContext'
 import { Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Slider from 'react-slick'
 
-const Hero = ({ wpData }) => {
-	return (
-		<Container fluid className='px-0 mx-0'>
-			<SimpleSlider props={wpData} />
-		</Container>
-	)
+const Hero = () => {
+	const { pageData } = useContext(PageContext)
+
+	if (pageData) {
+		return (
+			<Container fluid className='px-0 mx-0'>
+				<SimpleSlider props={pageData.data.hero} />
+			</Container>
+		)
+	}
 }
 
 const SimpleSlider = ({ props }) => {

@@ -1,5 +1,12 @@
-import React, { useEffect, useCallback, useState, Fragment } from 'react'
+import React, {
+	useEffect,
+	useCallback,
+	useState,
+	Fragment,
+	useContext,
+} from 'react'
 import { Routes, Route } from 'react-router-dom'
+import { PageContext } from './lib/pageContext'
 import Home from './pages/Home'
 import About from './pages/About'
 import Portfolio from './pages/Portfolio'
@@ -15,16 +22,17 @@ import TattooArchiveSingle from './pages/TattooArchiveSingle'
 import ArticleArchiveSingle from './pages/ArticleArchiveSingle'
 
 const App = ({ data }) => {
-	console.log(data)
 	const [MyWpData, setMyWpData] = useState(null)
+
+	const { pageData, setPageData } = useContext(PageContext)
 
 	const url =
 		window.location.hostname === 'localhost'
 			? 'http://beeyouink.local'
 			: window.location.origin
 
-	const fetchedWPData = useCallback(() => {
-		axios
+	const fetchedWPData = useCallback(async () => {
+		await axios
 			.get(`${url}/wp-json/beeYouInk/v1/mainData`, {
 				headers: {
 					'Content-Type': 'application/json',
@@ -33,18 +41,19 @@ const App = ({ data }) => {
 			})
 			.then((res) => {
 				setMyWpData(res)
+				setPageData(res)
 			})
 			.catch((e) => {
 				console.log(e)
 			})
-	}, [url])
+	}, [url, setPageData])
 
 	useEffect(() => {
 		fetchedWPData()
 	}, [fetchedWPData])
 
-	if (MyWpData) {
-		if (MyWpData.status === 200) {
+	if (pageData) {
+		if (pageData.status === 200) {
 			return (
 				<Fragment>
 					<ScrollToTop>

@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { PageContext } from '../lib/pageContext'
 import Container from 'react-bootstrap/Container'
 
-const StoryTextComponent = ({ wpData }) => {
+const StoryTextComponent = () => {
+	const { pageData } = useContext(PageContext)
+
 	return (
 		<Container className='p-5 px-xs-0 story-text' fluid>
 			<Container className='max-w-860 px-5 story-text__card mx-auto'>
-				{wpData.map(
+				{pageData.data.story_text.map(
 					(e, i) =>
 						e.show_story && (
 							<div key={i}>

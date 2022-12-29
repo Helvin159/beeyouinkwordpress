@@ -6,17 +6,16 @@ import RecentArticlesComponent from '../components/RecentArticlesComponent'
 // import TeamShowCaseComponent from '../components/TeamShowCaseComponent'
 import TestimonialsComponent from '../components/TestimonialsComponent/TestimonialsComponent'
 
-const Home = ({ props, wpData }) => {
+const Home = () => {
 	return (
 		<Fragment>
-			<Hero wpData={wpData.hero} />
-			<RecentArticlesComponent wpData={wpData.articles} />
-
-			<PageCollage featuredPages={props.pages.collage_pages} wpData={wpData} />
-			<TestimonialsComponent wpData={wpData.testimonials} />
+			<Hero />
+			<RecentArticlesComponent />
+			<PageCollage />
+			<TestimonialsComponent />
 			{
-				//	<StoryTextComponent wpData={wpData.story_text} />
-				// <TeamShowCaseComponent wpData={wpData.team} />
+				// <TeamShowCaseComponent />
+				// <StoryTextComponent />
 			}
 		</Fragment>
 	)
