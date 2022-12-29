@@ -30,7 +30,8 @@ function bee_you_ink_post_types(){
       'all_items' => 'All Components',
       'singular_name' => 'Component',
     ),
-    'menu_icon' => 'dashicons-index-card', // 'capabilities'=> array(
+    'menu_icon' => 'dashicons-index-card', 
+    // 'capabilities'=> array(
     // 'edit_post' => false,
     // 'edit_published_posts'=> false,
     // 'edit_private_posts' => false

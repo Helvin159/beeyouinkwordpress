@@ -123,13 +123,16 @@ function beeYouInkData($data){
     
     while($hero->have_posts()){
         $hero->the_post();
-                        array_push($results['hero'], array(
-                            'title'=>get_the_title(),      
-                            'home_hero_image' => get_field('home_hero_image'),
-                            'intro_text' => get_field('intro_text'),
-                            'heading' => get_field('heading'),
-                            'url' => get_field('url'),
-                ));
+        global $post;
+        global $author_id;
+        array_push($results['hero'], array(
+            'title'=>get_the_title(),      
+            'home_hero_image' => get_field('home_hero_image'),
+            'intro_text' => get_field('intro_text'),
+            'heading' => get_field('heading'),
+            'url' => get_field('url'),
+            'slug'=> $post->post_name,
+        ));
     }
     
     while($storyText->have_posts()){
@@ -174,7 +177,6 @@ function beeYouInkData($data){
     }
     
     while($tattooWork->have_posts()){
-        $tattooWork->the_post();
         $tattooWork->the_post();
         array_push($results['tattoo_work'], array(
             'title'=>get_the_title(),      
