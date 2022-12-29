@@ -21,6 +21,8 @@ function beeYouRoute(){
 
 function beeYouInkData($data){
 
+
+
     $components = new WP_Query(array(
         'post_type'=>'components'
     ));
@@ -64,11 +66,14 @@ function beeYouInkData($data){
     ));
     wp_reset_query();
 
+    $homeId = get_option('page_on_front');
 
     $results = array(
         'tattoo_shop_details'=>array(
             'name'=>get_bloginfo(),
-            'url' => get_site_url()
+            'url' => get_site_url(),
+            'home_page_id'=>$homeId,
+            'featured_img' => get_field('featured_image', $homeId)
         ),
         'pages'=>array(
             'all_pages'=>array(),
@@ -89,9 +94,15 @@ function beeYouInkData($data){
 
     while($pages->have_posts()){
         $pages->the_post();
+        global $post;
+
+        if(get_the_title() === 'Home'){
+            $homePageFeatuedImg = get_field('featured_image'); 
+        }
         array_push($results['pages']['all_pages'], array(
                 'page'=>get_the_title(),
                 'url'=>get_the_permalink(),
+                'slug'=> $post->post_name,
                 'page_components' => get_field('page_components'),
                 'featured_page' => get_field('featured_page'),
                 'page_collage_single' => get_field('page_collage_single'),
@@ -102,6 +113,7 @@ function beeYouInkData($data){
                 array_push($results['pages']['featured_pages'], array(
                     'page'=>get_the_title(),
                     'url'=>get_the_permalink(),
+                    'slug'=> $post->post_name,
                     'page_components' => get_field('page_components'),
                     'featured_page' => get_field('featured_page'),
                     'page_collage_single' => get_field('page_collage_single'),
@@ -113,6 +125,7 @@ function beeYouInkData($data){
                 array_push($results['pages']['collage_pages']['single'], array(
                     'page'=>get_the_title(),
                     'url'=>get_the_permalink(),
+                    'slug'=> $post->post_name,
                     'page_components' => get_field('page_components'),
                     'featured_page' => get_field('featured_page'),
                     'page_collage_single' => get_field('page_collage_single'),
@@ -185,7 +198,7 @@ function beeYouInkData($data){
             'tatt_shots_one' => get_field('tatt_shots_one'),
             'tatt_shots_two' => get_field('tatt_shots_two'),
             'show_tattoo_in_gallery' => get_field('show_tattoo_in_gallery'),
-            'slug'=> 'tattoo/'.''.$post->post_name,
+            'slug'=> $post->post_name,
             'slug_namespace' => 'tattoo/'
         ));
     }

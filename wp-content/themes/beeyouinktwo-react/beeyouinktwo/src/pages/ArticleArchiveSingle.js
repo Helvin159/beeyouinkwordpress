@@ -6,6 +6,9 @@ const ArticleArchiveSingle = ({ wpData }) => {
 
 		return (
 			<div className='max-w-1024 mx-auto text-center'>
+				<div className='max-w-920 mx-auto'>
+					<h1>Curated Articles for You!</h1>
+				</div>
 				<div className='py-5 max-w-860 mx-auto' tabIndex={0}>
 					<h1 tabIndex={0}>{wpData.title}</h1>
 					<p tabIndex={0}>{wpData.article_date}</p>

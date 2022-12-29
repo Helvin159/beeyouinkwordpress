@@ -21,7 +21,7 @@ import MyData from './lib/data.json'
 import TattooArchiveSingle from './pages/TattooArchiveSingle'
 import ArticleArchiveSingle from './pages/ArticleArchiveSingle'
 
-const App = ({ data }) => {
+const App = () => {
 	const [MyWpData, setMyWpData] = useState(null)
 
 	const { pageData, setPageData } = useContext(PageContext)
@@ -61,35 +61,26 @@ const App = ({ data }) => {
 							<Route
 								path='/'
 								element={<Outlet props={MyData} wpData={MyWpData.data} />}>
-								<Route
-									index
-									path='/'
-									element={<Home props={MyData} wpData={MyWpData.data} />}
-								/>
+								<Route index path='/' element={<Home />} />
 
-								{MyWpData.data.pages.all_pages.map((i, k) =>
+								{pageData.data.pages.all_pages.map((i, k) =>
 									i.page.toLowerCase() === 'home' ? (
 										<Route
 											index
-											path='/'
-											element={<Home props={MyData} wpData={MyWpData.data} />}
+											path={`/${i.page}`}
+											element={<Home />}
 											key={k}
 										/>
 									) : i.page.toLowerCase() === 'about' ? (
 										<Route
 											path={`/${i.page.toLowerCase()}`}
-											element={<About props={MyData} wpData={MyWpData.data} />}
+											element={<About />}
 											key={k}
 										/>
 									) : i.page.toLowerCase() === 'portfolio' ? (
 										<Route
 											path={`/${i.page.toLowerCase()}`}
-											element={
-												<Portfolio
-													props={MyData}
-													wpData={MyWpData.data.tattoo_work}
-												/>
-											}
+											element={<Portfolio />}
 											key={k}
 										/>
 									) : i.page.toLowerCase() === 'blog' ? (
@@ -109,14 +100,21 @@ const App = ({ data }) => {
 
 								{
 									// Tatto Post Type Single Post
-									MyWpData.data.tattoo_work.map((i, k) => (
+									pageData.data.tattoo_work.map((i, k) => (
 										<Route
 											path={`portfolio/${i.slug}`}
-											element={
-												<TattooArchiveSingle
-													wpData={MyWpData.data.tattoo_work[k]}
-												/>
-											}
+											element={<TattooArchiveSingle wpData={i} />}
+											key={k}
+										/>
+									))
+								}
+
+								{
+									// Tatto Post Type Single Post
+									pageData.data.tattoo_work.map((i, k) => (
+										<Route
+											path={`${i.slug}`}
+											element={<TattooArchiveSingle wpData={i} />}
 											key={k}
 										/>
 									))
@@ -124,14 +122,10 @@ const App = ({ data }) => {
 
 								{
 									// Article Post Type Single Post
-									MyWpData.data.articles.map((i, k) => (
+									pageData.data.articles.map((i, k) => (
 										<Route
 											path={`${i.slug}`}
-											element={
-												<ArticleArchiveSingle
-													wpData={MyWpData.data.articles[k]}
-												/>
-											}
+											element={<ArticleArchiveSingle wpData={i} />}
 											key={k}
 										/>
 									))

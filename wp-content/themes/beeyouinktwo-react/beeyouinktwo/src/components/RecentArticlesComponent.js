@@ -44,14 +44,19 @@ const RecentArticlesComponent = () => {
 				<div className='recent-articles__header'>
 					<Row>
 						<Col className='col-10'>
-							<p>News</p>
-							<h3>Everything you need to know about tattoos</h3>
+							<p>Curated Articles</p>
+							<h3>Insights and information you need to know about tattoos</h3>
 						</Col>
-						<Col className='col-2'>arrows</Col>
+						<Col className='col-2 recent-articles__desktop'>arrows</Col>
 					</Row>
 				</div>
 				<div className='recent-articles__wrapper'>
-					<Slider className='recent-articles__wrapper__slider' {...settings}>
+					{
+						// Hidden on mobile
+					}
+					<Slider
+						className='recent-articles__wrapper__slider recent-articles__desktop'
+						{...settings}>
 						{pageData.data.articles.map((i, k) => {
 							const date = new Date(i.article_date)
 							const day = date.getDate()
@@ -82,6 +87,39 @@ const RecentArticlesComponent = () => {
 							)
 						})}
 					</Slider>
+					<div className='recent-articles__mobile mx-auto max-w-860'>
+						{pageData.data.articles.map((i, k) => {
+							const date = new Date(i.article_date)
+							const day = date.getDate()
+							const month = date.toLocaleString('default', { month: 'short' })
+							return (
+								<div className='mx-auto text-center my-3 max-w-360' key={k}>
+									<div className='py-3'>
+										<img
+											className='img-fluid max-w-260'
+											src={i.article_image}
+											alt={i.title}
+										/>
+									</div>
+
+									{i.article_date !== '' ? (
+										<p className='left-card-date'>
+											{`${month} · `}
+											<span className='month-span'>{`${day}`}</span>
+										</p>
+									) : (
+										<p className='left-card-date'>No date</p>
+									)}
+									<Link to={`${i.slug}`}>
+										<h4 className='overflow-scroll'>{i.title}</h4>
+									</Link>
+									<Link to={`${i.slug}`}>
+										Read more <span>{' >'}</span>
+									</Link>
+								</div>
+							)
+						})}
+					</div>
 				</div>
 			</Container>
 		</Fragment>

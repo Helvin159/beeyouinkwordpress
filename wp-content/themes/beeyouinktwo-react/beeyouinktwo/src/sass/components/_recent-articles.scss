@@ -1,8 +1,35 @@
 .recent-articles {
+	& a {
+		text-decoration: none;
+		color: var($primaryColor);
+	}
 	overflow: hidden;
 
 	@media (min-width: 576px) {
 		padding: 10rem 0 10rem 10rem;
+	}
+
+	@media (max-width: 768px) {
+		padding: 10rem 2rem 10rem 2rem;
+		// display: none;
+	}
+
+	&__desktop {
+		@media (max-width: 625px) {
+			// padding: 10rem 2rem 10rem 2rem;
+			display: none;
+		}
+	}
+
+	&__mobile {
+		& a {
+			text-decoration: none !important;
+			color: var($primaryColor) !important;
+		}
+		@media (min-width: 625px) {
+			// padding: 10rem 2rem 10rem 2rem;
+			display: none;
+		}
 	}
 
 	&__header {
@@ -10,8 +37,17 @@
 
 		& .row {
 			& .col-10 {
-				@media (min-width: 576px) {
-					padding-right: 30rem;
+				@media (min-width: 768px) {
+					padding-right: 10rem;
+				}
+				@media (min-width: 860px) {
+					padding-right: 15rem;
+				}
+				@media (min-width: 1080px) {
+					padding-right: 25rem;
+				}
+				@media (max-width: 768px) {
+					padding-right: 2rem;
 				}
 				& p {
 					margin: 0 0 0 0;

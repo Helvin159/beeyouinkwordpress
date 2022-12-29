@@ -5,10 +5,10 @@ import TikTokEmbed from '../components/TikTokEmbed'
 // import RecentArticlesComponent from '../components/RecentArticlesComponent'
 // import TestimonialsComponent from '../components/TestimonialsComponent/TestimonialsComponent'
 
-const About = ({ props, wpData }) => {
+const About = () => {
 	return (
 		<Fragment>
-			<Hero wpData={wpData.hero} />
+			<Hero />
 			<TikTokEmbed />
 		</Fragment>
 	)

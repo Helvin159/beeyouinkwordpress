@@ -38,7 +38,7 @@ const SimpleSlider = ({ props }) => {
 						<div className='slick-slider-hero__card__text'>
 							<p>{i.intro_text}</p>
 							<h1>{i.heading}</h1>
-							<Link to='/'>View More</Link>
+							<Link to={i.slug}>View More</Link>
 						</div>
 						<img src={i.home_hero_image} alt={i.title} />
 					</div>

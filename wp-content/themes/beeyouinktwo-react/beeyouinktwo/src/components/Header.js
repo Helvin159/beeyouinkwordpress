@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/esm/Col'
+import { PageContext } from '../lib/pageContext'
 
-function Header({ props, wpData }) {
+function Header() {
+	const { pageData } = useContext(PageContext)
 	return (
 		<header className='navigation'>
 			<Row>
@@ -29,9 +31,9 @@ function Header({ props, wpData }) {
 					<Row className='justify-content-between navigation__items__links '>
 						<Col sm={10} className='navigation__items__links__col'>
 							<ul className='pt-2 px-0'>
-								{props.pages.main_pages.map((i, k) => (
+								{pageData.data.pages.featured_pages.map((i, k) => (
 									<li className='d-inline-block' key={k}>
-										<Link className='nav-link' to={i.url}>
+										<Link className='nav-link' to={i.slug}>
 											{i.page}
 										</Link>
 									</li>

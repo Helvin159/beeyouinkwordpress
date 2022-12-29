@@ -3,20 +3,16 @@ import { Outlet as Layout } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-const Outlet = ({ props, wpData }) => {
+const Outlet = () => {
 	return (
 		<Fragment>
-			{
-				// <div id='siteCover'></div>
-			}
-
-			<Header props={props} wpData={wpData} />
+			<Header />
 
 			<main>
 				<Layout />
 			</main>
 
-			<Footer props={props} wpData={wpData} />
+			<Footer />
 		</Fragment>
 	)
 }

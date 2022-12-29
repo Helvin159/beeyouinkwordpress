@@ -1,10 +1,12 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { PageContext } from '../lib/pageContext'
 
-const Footer = ({ props }) => {
-	const { tattoo_shop_details, pages } = props
+const Footer = () => {
+	const { pageData } = useContext(PageContext)
+
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		// console.log(e.target)
@@ -15,7 +17,7 @@ const Footer = ({ props }) => {
 			<style>{`
 			footer {
 				background:linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
-				 url(${tattoo_shop_details.img_url});
+				 url(${pageData.data.tattoo_shop_details.featured_img});
 				background-size:cover;
 				background-position:center right;
 			}
@@ -39,9 +41,9 @@ const Footer = ({ props }) => {
 								<div className='mx-auto  p-0'>
 									<h4>BeeYou Ink</h4>
 									<ul>
-										{pages.main_pages.map((i, k) => (
+										{pageData.data.pages.featured_pages.map((i, k) => (
 											<li key={k}>
-												<Link to={i.url}>{i.page}</Link>
+												<Link to={i.slug}>{i.page}</Link>
 											</li>
 										))}
 									</ul>
@@ -51,9 +53,9 @@ const Footer = ({ props }) => {
 								<div className='mx-auto p-0'>
 									<h4>Sub Pages</h4>
 									<ul>
-										{pages.sub_pages.map((i, k) => (
+										{pageData.data.pages.all_pages.map((i, k) => (
 											<li key={k}>
-												<Link to={i.url}>{i.page}</Link>
+												<Link to={i.slug}>{i.page}</Link>
 											</li>
 										))}
 									</ul>

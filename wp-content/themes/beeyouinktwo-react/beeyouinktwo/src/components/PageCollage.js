@@ -59,7 +59,7 @@ const PageCollage = () => {
 							<div
 								className={`big-card card-${pageData.data.pages.collage_pages.single[0].page}`}>
 								<div className='big-card__text'>
-									<Link to={pageData.data.pages.collage_pages.single[0].url}>
+									<Link to={pageData.data.pages.collage_pages.single[0].slug}>
 										<h3>{pageData.data.pages.collage_pages.single[0].page}</h3>
 									</Link>
 								</div>
@@ -76,7 +76,7 @@ const PageCollage = () => {
 													{(k === 0 || k === 3) && (
 														<div className='small-cards__text'>
 															<h3>
-																<Link to={i.url}>{i.page}</Link>
+																<Link to={i.slug}>{i.page}</Link>
 															</h3>
 														</div>
 													)}
