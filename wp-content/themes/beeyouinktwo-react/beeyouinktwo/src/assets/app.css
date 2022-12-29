@@ -426,10 +426,10 @@ footer .row {
     color: var(black); }
   @media (min-width: 576px) {
     .recent-articles {
-      padding: 10rem 0 10rem 10rem; } }
+      padding: 10rem 0 10rem 10rem !important; } }
   @media (max-width: 768px) {
     .recent-articles {
-      padding: 10rem 2rem 10rem 2rem; } }
+      padding: 10rem 2rem 10rem 2rem !important; } }
   @media (max-width: 625px) {
     .recent-articles__desktop {
       display: none !important; } }
