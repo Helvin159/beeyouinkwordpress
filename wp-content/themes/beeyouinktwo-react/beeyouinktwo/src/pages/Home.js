@@ -11,8 +11,9 @@ const Home = ({ props, wpData }) => {
 		<Fragment>
 			<Hero wpData={wpData.hero} />
 			<RecentArticlesComponent wpData={wpData.articles} />
-			<TestimonialsComponent wpData={wpData.testimonials} />
+			<script async src='https://www.tiktok.com/embed.js'></script>
 			<PageCollage featuredPages={props.pages.collage_pages} wpData={wpData} />
+			<TestimonialsComponent wpData={wpData.testimonials} />
 			<StoryTextComponent wpData={wpData.story_text} />
 			{
 				// <TeamShowCaseComponent wpData={wpData.team} />
