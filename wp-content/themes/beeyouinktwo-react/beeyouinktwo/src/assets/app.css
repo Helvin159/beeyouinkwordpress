@@ -432,7 +432,7 @@ footer .row {
       padding: 10rem 2rem 10rem 2rem; } }
   @media (max-width: 625px) {
     .recent-articles__desktop {
-      display: none; } }
+      display: none !important; } }
   .recent-articles__mobile a {
     text-decoration: none !important;
     color: var(black) !important; }

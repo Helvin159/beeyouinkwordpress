@@ -17,7 +17,7 @@
 	&__desktop {
 		@media (max-width: 625px) {
 			// padding: 10rem 2rem 10rem 2rem;
-			display: none;
+			display: none !important;
 		}
 	}
 
