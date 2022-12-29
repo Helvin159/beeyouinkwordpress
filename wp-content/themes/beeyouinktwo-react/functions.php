@@ -43,6 +43,7 @@ function beeyou_files(){
 
   // Bootstrap Scripts
   wp_enqueue_script('bootstrap_script-component-script', '//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js', NULL,'1.0',true );
+  wp_enqueue_script('tiktokscropt', '//www.tiktok.com/embed.js', NULL,'1.0',true );
 
 
 

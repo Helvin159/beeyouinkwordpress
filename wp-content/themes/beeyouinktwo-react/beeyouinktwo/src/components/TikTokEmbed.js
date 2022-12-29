@@ -20,8 +20,10 @@ const TikTokEmbed = () => {
 					</a>{' '}
 				</section>{' '}
 			</blockquote>{' '}
+			<script async src='https://www.tiktok.com/embed.js'></script>
 		</div>
 	)
 }
 
 export default TikTokEmbed
+
