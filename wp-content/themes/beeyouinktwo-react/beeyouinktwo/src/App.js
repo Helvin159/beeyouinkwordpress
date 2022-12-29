@@ -98,10 +98,10 @@ const App = () => {
 								)}
 
 								{
-									// Tatto Post Type Archive Pages
+									// Tatto Post Type Single Post
 									MyWpData.data.tattoo_work.map((i, k) => (
 										<Route
-											path={`/portfolio/${i.slug}`}
+											path={`portfolio/${i.slug}`}
 											element={
 												<TattooArchiveSingle
 													wpData={MyWpData.data.tattoo_work[k]}
@@ -113,10 +113,10 @@ const App = () => {
 								}
 
 								{
-									// Article Post Type Archive Pages
+									// Article Post Type Single Post
 									MyWpData.data.articles.map((i, k) => (
 										<Route
-											path={`/article/${i.slug}`}
+											path={`${i.slug}`}
 											element={
 												<ArticleArchiveSingle
 													wpData={MyWpData.data.articles[k]}

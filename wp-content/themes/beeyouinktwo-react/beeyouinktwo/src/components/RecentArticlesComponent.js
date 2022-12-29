@@ -57,12 +57,17 @@ const RecentArticlesComponent = ({ wpData }) => {
 								<div key={k}>
 									<Row className='recent-articles__wrapper__slider__row'>
 										<Col className='col-6  recent-articles__wrapper__slider__row__left-card'>
-											<h4>{i.title}</h4>
-											<p className='left-card-date'>
-												{`${month} · `}
-												<span className='month-span'>{`${day}`}</span>
-											</p>
-											<Link to={`article/${i.slug}`}>
+											<h4 className='overflow-scroll'>{i.title}</h4>
+
+											{i.article_date !== '' ? (
+												<p className='left-card-date'>
+													{`${month} · `}
+													<span className='month-span'>{`${day}`}</span>
+												</p>
+											) : (
+												<p className='left-card-date'>No date</p>
+											)}
+											<Link to={`${i.slug}`}>
 												Read more <span>{' >'}</span>
 											</Link>
 										</Col>

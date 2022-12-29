@@ -35,7 +35,7 @@ function beeYouInkData($data){
 
     $articles = new WP_Query(array(
         'post_type' => 'articles',
-        'order'=>'ASC'
+        'order'=>'DESC'
     ));
     wp_reset_query();
 
@@ -142,13 +142,17 @@ function beeYouInkData($data){
             'title'=>get_the_title(),      
             'article_date' => get_field('article_date'),
             'article_image' => get_field('article_image'),
+            'show_img_in_article'=>get_field('show_image_in_article'),
             'author_first_name'=>get_the_author_meta('first_name'),
             'author_last_name'=>get_the_author_meta('last_name'),
+            'author'=>get_the_author(),
+            'custom_author'=>get_field('custom_author'),
             'content'=>get_the_content(),
             'url'=>get_the_permalink(),
             'post_id'=>get_the_ID(),
-            'slug'=>$post->post_name,
-            'slug_namespace' => 'article/'
+            'slug'=>'article/' .''.$post->post_name,
+
+
         ));
     }
 
@@ -170,7 +174,7 @@ function beeYouInkData($data){
             'tatt_shots_one' => get_field('tatt_shots_one'),
             'tatt_shots_two' => get_field('tatt_shots_two'),
             'show_tattoo_in_gallery' => get_field('show_tattoo_in_gallery'),
-            'slug'=> $post->post_name,
+            'slug'=> 'tattoo/'.''.$post->post_name,
             'slug_namespace' => 'tattoo/'
         ));
     }
