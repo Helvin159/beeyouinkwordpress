@@ -3,7 +3,7 @@ import Hero from '../components/Hero'
 import PageCollage from '../components/PageCollage'
 import RecentArticlesComponent from '../components/RecentArticlesComponent'
 import StoryTextComponent from '../components/StoryTextComponent'
-import TeamShowCaseComponent from '../components/TeamShowCaseComponent'
+// import TeamShowCaseComponent from '../components/TeamShowCaseComponent'
 import TestimonialsComponent from '../components/TestimonialsComponent/TestimonialsComponent'
 
 const Home = ({ props, wpData }) => {
@@ -14,7 +14,9 @@ const Home = ({ props, wpData }) => {
 			<TestimonialsComponent wpData={wpData.testimonials} />
 			<PageCollage featuredPages={props.pages.collage_pages} wpData={wpData} />
 			<StoryTextComponent wpData={wpData.story_text} />
-			<TeamShowCaseComponent wpData={wpData.team} />
+			{
+				// <TeamShowCaseComponent wpData={wpData.team} />
+			}
 		</Fragment>
 	)
 }

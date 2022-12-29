@@ -6,11 +6,20 @@ function beeYouRoute(){
     register_rest_route('beeYouInk/v1', 'mainData', array(
         'methods' => WP_REST_SERVER::READABLE,
         'callback' => 'beeYouInkData'
+    ) );    
+    
+    register_rest_route('beeYouInk/v1', 'articles', array(
+        'methods' => WP_REST_SERVER::READABLE,
+        'callback' => 'beeYouInkArticles'
+    ) );
+    
+    register_rest_route('beeYouInk/v1', 'tattoos', array(
+        'methods' => WP_REST_SERVER::READABLE,
+        'callback' => 'beeYouInkTattoos'
     ) );
 }
 
 function beeYouInkData($data){
-
 
     $components = new WP_Query(array(
         'post_type'=>'components'
@@ -191,6 +200,80 @@ function beeYouInkData($data){
         ));
     }
 
+    return $results;
+}
+
+function beeYouInkArticles($data){
+    $articles = new WP_Query(array(
+        'post_type' => 'articles',
+        'order'=>'DESC'
+    ));
+    wp_reset_query();
+
+
+    $results = array(
+        'tattoo_shop_details'=>array(
+            'name'=>get_bloginfo(),
+            'url' => get_site_url()
+        ),
+        'articles'=>array(),
+    );
+
+    while($articles->have_posts()){
+        $articles->the_post();
+        global $post;
+        global $author_id;
+        array_push($results['articles'], array(
+            'title'=>get_the_title(),      
+            'article_date' => get_field('article_date'),
+            'article_image' => get_field('article_image'),
+            'show_img_in_article'=>get_field('show_image_in_article'),
+            'author_first_name'=>get_the_author_meta('first_name'),
+            'author_last_name'=>get_the_author_meta('last_name'),
+            'author'=>get_the_author(),
+            'custom_author'=>get_field('custom_author'),
+            'content'=>get_the_content(),
+            'url'=>get_the_permalink(),
+            'post_id'=>get_the_ID(),
+            'slug'=>'article/' .''.$post->post_name,
+
+
+        ));
+    }
+    return $results;
+}
+
+function beeYouInkTattoos($data){
+
+    $tattooWork = new WP_Query(array(
+        'post_type' => 'tattoo_work'
+    ));
+    wp_reset_query();
+    
+
+    $results = array(
+        'tattoo_shop_details'=>array(
+            'name'=>get_bloginfo(),
+            'url' => get_site_url()
+        ),
+        'tattoo_work'=>array(),
+
+    );
+    
+    while($tattooWork->have_posts()){
+        $tattooWork->the_post();
+        $tattooWork->the_post();
+        array_push($results['tattoo_work'], array(
+            'title'=>get_the_title(),      
+            'content' =>get_the_content(),
+            'image' => get_field('image'),
+            'tatt_shots_one' => get_field('tatt_shots_one'),
+            'tatt_shots_two' => get_field('tatt_shots_two'),
+            'show_tattoo_in_gallery' => get_field('show_tattoo_in_gallery'),
+            'slug'=> 'tattoo/'.''.$post->post_name,
+            'slug_namespace' => 'tattoo/',
+        ));
+    }
 
     return $results;
 }

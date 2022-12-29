@@ -4,12 +4,25 @@
 
 function bee_you_ink_post_types(){
 
+
+  if(is_user_logged_in()){
+    $user = wp_get_current_user();
+    $roles = ( array ) $user->roles;
+    
+    if($roles[0] == 'administrator' OR $roles[0] == 'Administrator'){
+      $isAdmin = true;
+    }else {
+      $isAdmin = false;
+    }
+  }
+
+
   register_post_type('components', array(
     'show_in_rest' => true,
     'supports' => array(
         'title', 'excerpt',
       ),
-    'public' => true,
+    'public' => $isAdmin,
     'labels'=>array(
       'name' => 'Components',
       'add_new_item' => 'Add New Component',
@@ -17,8 +30,7 @@ function bee_you_ink_post_types(){
       'all_items' => 'All Components',
       'singular_name' => 'Component',
     ),
-    'menu_icon' => 'dashicons-index-card',
-    // 'capabilities'=> array(
+    'menu_icon' => 'dashicons-index-card', // 'capabilities'=> array(
     // 'edit_post' => false,
     // 'edit_published_posts'=> false,
     // 'edit_private_posts' => false

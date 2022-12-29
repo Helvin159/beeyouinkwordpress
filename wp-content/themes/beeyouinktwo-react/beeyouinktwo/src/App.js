@@ -14,7 +14,8 @@ import MyData from './lib/data.json'
 import TattooArchiveSingle from './pages/TattooArchiveSingle'
 import ArticleArchiveSingle from './pages/ArticleArchiveSingle'
 
-const App = () => {
+const App = ({ data }) => {
+	console.log(data)
 	const [MyWpData, setMyWpData] = useState(null)
 
 	const url =
