@@ -19,6 +19,7 @@ import Outlet from './pages/Outlet'
 import axios from 'axios'
 import MyData from './lib/data.json'
 import TattooArchiveSingle from './pages/TattooArchiveSingle'
+import TeamArciveSingle from './pages/TeamArchiveSingle'
 import ArticleArchiveSingle from './pages/ArticleArchiveSingle'
 
 const App = () => {
@@ -101,22 +102,48 @@ const App = () => {
 								{
 									// Tatto Post Type Single Post
 									pageData.data.tattoo_work.map((i, k) => (
-										<Route
-											path={`portfolio/${i.slug}`}
-											element={<TattooArchiveSingle wpData={i} />}
-											key={k}
-										/>
+										<Fragment key={k}>
+											<Route
+												path={`${i.slug}`}
+												element={<TattooArchiveSingle wpData={i} />}
+											/>
+											<Route
+												path={`portfolio/${i.slug}`}
+												element={<TattooArchiveSingle wpData={i} />}
+											/>
+										</Fragment>
+									))
+								}
+
+								{
+									// Team Post Type Single Post
+									pageData.data.team.map((i, k) => (
+										<Fragment key={k}>
+											<Route
+												path={`${i.slug}`}
+												element={<TeamArciveSingle wpData={i} />}
+											/>
+											<Route
+												path={`portfolio/${i.slug}`}
+												element={<TeamArciveSingle wpData={i} />}
+											/>
+										</Fragment>
 									))
 								}
 
 								{
 									// Tatto Post Type Single Post
 									pageData.data.tattoo_work.map((i, k) => (
-										<Route
-											path={`${i.slug}`}
-											element={<TattooArchiveSingle wpData={i} />}
-											key={k}
-										/>
+										<Fragment key={k}>
+											<Route
+												path={`${i.slug}`}
+												element={<TattooArchiveSingle wpData={i} />}
+											/>
+											<Route
+												path={`portfolio/${i.slug}`}
+												element={<TattooArchiveSingle wpData={i} />}
+											/>
+										</Fragment>
 									))
 								}
 

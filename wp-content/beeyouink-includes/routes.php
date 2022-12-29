@@ -191,8 +191,10 @@ function beeYouInkData($data){
     
     while($tattooWork->have_posts()){
         $tattooWork->the_post();
+        global $post;
         array_push($results['tattoo_work'], array(
             'title'=>get_the_title(),      
+            'artist' => get_post(get_field('tattoo_artist')),
             'content' =>get_the_content(),
             'image' => get_field('image'),
             'tatt_shots_one' => get_field('tatt_shots_one'),
@@ -205,13 +207,16 @@ function beeYouInkData($data){
     
     while($team->have_posts()){
         $team->the_post();
+                global $post;
+
         array_push($results['team'], array(
             'name'=>get_the_title(),
             'position'=>get_field('position'),
             'about' =>get_the_content(),
+        
             'img_url' =>get_the_post_thumbnail_url(),
             'profile_url'=>get_the_permalink(),
-            'social_media'
+            'slug'=> $post->post_name,
         ));
     }
 
