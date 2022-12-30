@@ -1,0 +1,14 @@
+.slick-slider-product {
+	&__img {
+		height: 260px !important;
+		width: 260px !important;
+		text-align: center;
+
+		& img {
+			overflow: hidden;
+			margin: 0 auto;
+			max-width: 100%;
+		}
+	}
+}
+

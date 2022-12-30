@@ -87,6 +87,9 @@ footer {
 .max-w-260 {
   max-width: 260px; }
 
+.w-100 {
+  width: 100% !important; }
+
 .didot {
   font-family: didot; }
   .didot-bold {
@@ -582,3 +585,12 @@ footer .row {
       padding: 0; }
   .products-container__col__card__content {
     opacity: 0; }
+
+.slick-slider-product__img {
+  height: 260px !important;
+  width: 260px !important;
+  text-align: center; }
+  .slick-slider-product__img img {
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 100%; }
