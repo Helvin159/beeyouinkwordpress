@@ -125,6 +125,10 @@ const App = () => {
 												path={`portfolio/${i.slug}`}
 												element={<TattooArchiveSingle wpData={i} />}
 											/>
+											<Route
+												path={`tattoo_work/${i.slug}`}
+												element={<TattooArchiveSingle wpData={i} />}
+											/>
 										</Fragment>
 									))
 								}
