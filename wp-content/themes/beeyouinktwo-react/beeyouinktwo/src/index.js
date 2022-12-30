@@ -7,6 +7,7 @@ import { PageProvider } from './lib/pageContext'
 
 import reportWebVitals from './reportWebVitals'
 import './assets/app.css'
+import { ProductProvider } from './lib/productContext'
 
 const root = ReactDOM.createRoot(document.getElementById('main'))
 
@@ -14,7 +15,9 @@ root.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<PageProvider>
-				<App />
+				<ProductProvider>
+					<App />
+				</ProductProvider>
 			</PageProvider>
 		</BrowserRouter>
 	</React.StrictMode>

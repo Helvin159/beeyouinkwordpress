@@ -15,6 +15,8 @@ import TattooArchiveSingle from './pages/TattooArchiveSingle'
 import TeamArciveSingle from './pages/TeamArchiveSingle'
 import ArticleArchiveSingle from './pages/ArticleArchiveSingle'
 import { ProductContext } from './lib/productContext'
+import Products from './pages/Products'
+import SingleProduct from './pages/SingleProduct'
 
 const App = () => {
 	const { pageData, setPageData } = useContext(PageContext)
@@ -26,35 +28,22 @@ const App = () => {
 			: window.location.origin
 
 	const fetchedWPData = useCallback(async () => {
-		await axios
-			.get(`${url}/wp-json/beeYouInk/v1/mainData`, {
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				url: `${url}/wp-json/beeYouInk/v1/mainData`,
-			})
-			.then((res) => {
-				// console.log(first)
-				setPageData(res)
-			})
-			.catch((e) => {
-				console.log(e)
-			})
+		let reqOne = axios.get(`${url}/wp-json/beeYouInk/v1/mainData`)
+		let reqTwo = axios.get(
+			`https://beeyouink.mrrymer.tech/wp-json/wc/v3/products?consumer_key=${process.env.REACT_APP_CONSUMER_KEY}&consumer_secret=${process.env.REACT_APP_CONSUMER_SECRET}`
+		)
 
 		await axios
-			.get(
-				`${url}/wp-json/wc/v3/products?consumer_key=ck_8344935599a7d76c1554d0927afbe8fd4396d80c&consumer_secret=cs_2851b1b046bd2347884a7d275a8d45a511b64b3e`,
-				{
-					headers: {
-						'Content-Type': 'application/json',
-					},
-					url: `${url}/wp-json/wc/v3/products?consumer_key=ck_8344935599a7d76c1554d0927afbe8fd4396d80c&consumer_secret=cs_2851b1b046bd2347884a7d275a8d45a511b64b3e`,
-				}
+			.all([reqOne, reqTwo])
+			.then(
+				axios.spread((...responses) => {
+					const resOne = responses[0]
+					const resTwo = responses[1]
+
+					setPageData(resOne)
+					setProducts(resTwo.data)
+				})
 			)
-			.then((res) => {
-				console.log(res)
-				setProducts(res)
-			})
 			.catch((e) => {
 				console.log(e)
 			})
@@ -64,10 +53,7 @@ const App = () => {
 		fetchedWPData()
 	}, [fetchedWPData])
 
-	if (pageData) {
-		if (products) {
-			console.log(products)
-		}
+	if (pageData && products) {
 		if (pageData.status === 200) {
 			return (
 				<Fragment>
@@ -102,6 +88,12 @@ const App = () => {
 											element={<Blog />}
 											key={k}
 										/>
+									) : i.page.toLowerCase() === 'shop' ? (
+										<Route
+											path={`/${i.page.toLowerCase()}`}
+											element={<Products />}
+											key={k}
+										/>
 									) : (
 										<Route
 											path={`/${i.page.toLowerCase()}`}
@@ -130,6 +122,19 @@ const App = () => {
 										</Fragment>
 									))
 								}
+
+								{products.map((i, k) => (
+									<Fragment key={k}>
+										<Route
+											path={`/${i.slug}`}
+											element={<SingleProduct product={i} />}
+										/>
+										<Route
+											path={`shop/${i.slug}`}
+											element={<SingleProduct product={i} />}
+										/>
+									</Fragment>
+								))}
 
 								{
 									// Tatto Post Type Single Post

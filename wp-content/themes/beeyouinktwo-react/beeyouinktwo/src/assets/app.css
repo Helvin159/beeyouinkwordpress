@@ -557,3 +557,28 @@ footer .row {
   background-color: #000;
   z-index: 4;
   transition: ease-in-out 3s; }
+
+.products-container__col__card {
+  position: relative;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  height: 260px;
+  width: 260px;
+  margin: 0.5rem auto;
+  padding: 0; }
+  .products-container__col__card__title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.75);
+    color: white !important; }
+    .products-container__col__card__title a {
+      color: white !important; }
+    .products-container__col__card__title h4,
+    .products-container__col__card__title p {
+      margin: 0;
+      padding: 0; }
+  .products-container__col__card__content {
+    opacity: 0; }
