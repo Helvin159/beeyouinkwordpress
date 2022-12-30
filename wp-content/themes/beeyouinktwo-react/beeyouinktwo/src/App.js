@@ -43,12 +43,12 @@ const App = () => {
 
 		await axios
 			.get(
-				`${url}/wp-json/wc/v3/products?consumer_key=ck_5b907058629a6496c1d7da7d5173c9f186d6b3f4&consumer_secret=cs_910be06bf5325cd20ce3cf395aa349b8383f5e68`,
+				`${url}/wp-json/wc/v3/products?consumer_key=ck_8344935599a7d76c1554d0927afbe8fd4396d80c&consumer_secret=cs_2851b1b046bd2347884a7d275a8d45a511b64b3e`,
 				{
 					headers: {
 						'Content-Type': 'application/json',
 					},
-					url: `${url}/wp-json/wc/v3/products?consumer_key=ck_5b907058629a6496c1d7da7d5173c9f186d6b3f4&consumer_secret=cs_910be06bf5325cd20ce3cf395aa349b8383f5e68`,
+					url: `${url}/wp-json/wc/v3/products?consumer_key=ck_8344935599a7d76c1554d0927afbe8fd4396d80c&consumer_secret=cs_2851b1b046bd2347884a7d275a8d45a511b64b3e`,
 				}
 			)
 			.then((res) => {
