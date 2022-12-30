@@ -32,6 +32,7 @@ const App = () => {
 		let reqTwo = axios.get(
 			`https://beeyouink.mrrymer.tech/wp-json/wc/v3/products?consumer_key=${process.env.REACT_APP_CONSUMER_KEY}&consumer_secret=${process.env.REACT_APP_CONSUMER_SECRET}`
 		)
+		// let reqThree = axios.get(`${url}/wp-json/v2/posts`)
 
 		await axios
 			.all([reqOne, reqTwo])
@@ -131,6 +132,10 @@ const App = () => {
 										/>
 										<Route
 											path={`shop/${i.slug}`}
+											element={<SingleProduct product={i} />}
+										/>
+										<Route
+											path={`product/${i.slug}`}
 											element={<SingleProduct product={i} />}
 										/>
 									</Fragment>
