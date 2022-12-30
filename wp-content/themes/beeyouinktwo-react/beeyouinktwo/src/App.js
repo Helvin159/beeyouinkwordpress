@@ -100,22 +100,6 @@ const App = () => {
 								)}
 
 								{
-									// Tatto Post Type Single Post
-									pageData.data.tattoo_work.map((i, k) => (
-										<Fragment key={k}>
-											<Route
-												path={`${i.slug}`}
-												element={<TattooArchiveSingle wpData={i} />}
-											/>
-											<Route
-												path={`portfolio/${i.slug}`}
-												element={<TattooArchiveSingle wpData={i} />}
-											/>
-										</Fragment>
-									))
-								}
-
-								{
 									// Team Post Type Single Post
 									pageData.data.team.map((i, k) => (
 										<Fragment key={k}>
@@ -150,11 +134,18 @@ const App = () => {
 								{
 									// Article Post Type Single Post
 									pageData.data.articles.map((i, k) => (
-										<Route
-											path={`${i.slug}`}
-											element={<ArticleArchiveSingle wpData={i} />}
-											key={k}
-										/>
+										<Fragment>
+											<Route
+												path={`${i.slug}`}
+												element={<ArticleArchiveSingle wpData={i} />}
+												key={k}
+											/>
+											<Route
+												path={`article/${i.slug}`}
+												element={<ArticleArchiveSingle wpData={i} />}
+												key={k}
+											/>
+										</Fragment>
 									))
 								}
 							</Route>

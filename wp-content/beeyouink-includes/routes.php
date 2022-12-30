@@ -175,7 +175,7 @@ function beeYouInkData($data){
             'content'=>get_the_content(),
             'url'=>get_the_permalink(),
             'post_id'=>get_the_ID(),
-            'slug'=>'article/' .''.$post->post_name,
+            'slug'=>$post->post_name,
 
 
         ));
