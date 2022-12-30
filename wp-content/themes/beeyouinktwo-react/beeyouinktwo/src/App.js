@@ -1,10 +1,4 @@
-import React, {
-	useEffect,
-	useCallback,
-	useState,
-	Fragment,
-	useContext,
-} from 'react'
+import React, { useEffect, useCallback, Fragment, useContext } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { PageContext } from './lib/pageContext'
 import Home from './pages/Home'
@@ -20,9 +14,11 @@ import axios from 'axios'
 import TattooArchiveSingle from './pages/TattooArchiveSingle'
 import TeamArciveSingle from './pages/TeamArchiveSingle'
 import ArticleArchiveSingle from './pages/ArticleArchiveSingle'
+import { ProductContext } from './lib/productContext'
 
 const App = () => {
 	const { pageData, setPageData } = useContext(PageContext)
+	const { products, setProducts } = useContext(ProductContext)
 
 	const url =
 		window.location.hostname === 'localhost'
@@ -38,18 +34,40 @@ const App = () => {
 				url: `${url}/wp-json/beeYouInk/v1/mainData`,
 			})
 			.then((res) => {
+				// console.log(first)
 				setPageData(res)
 			})
 			.catch((e) => {
 				console.log(e)
 			})
-	}, [url, setPageData])
+
+		await axios
+			.get(
+				`${url}/wp-json/wc/v3/products?consumer_key=ck_5b907058629a6496c1d7da7d5173c9f186d6b3f4&consumer_secret=cs_910be06bf5325cd20ce3cf395aa349b8383f5e68`,
+				{
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					url: `${url}/wp-json/wc/v3/products?consumer_key=ck_5b907058629a6496c1d7da7d5173c9f186d6b3f4&consumer_secret=cs_910be06bf5325cd20ce3cf395aa349b8383f5e68`,
+				}
+			)
+			.then((res) => {
+				console.log(res)
+				setProducts(res)
+			})
+			.catch((e) => {
+				console.log(e)
+			})
+	}, [url, setPageData, setProducts])
 
 	useEffect(() => {
 		fetchedWPData()
 	}, [fetchedWPData])
 
 	if (pageData) {
+		if (products) {
+			console.log(products)
+		}
 		if (pageData.status === 200) {
 			return (
 				<Fragment>

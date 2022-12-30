@@ -1,0 +1,42 @@
+2022-12-30T15:28:13+00:00 DEBUG POST: https://ads.tiktok.com/marketing_api/api/developer/app/create_auto_approve/
+
+{"business_platform":"PROD","smb_id":"tt4b_woocommerce_63af038da55eahttpbeeyouinklocalwp-admin","smb_name":"PROD","redirect_url":"http:\/\/beeyouink.local\/wp-admin\/"}
+ ajax: DOING_AJAX
+2022-12-30T15:28:18+00:00 ERROR Tt4b_Mapi_Class::create_open_source_app: Response: 
+
+http_request_failed: cURL error 28: Operation timed out after 5000 milliseconds with 0 bytes received
+
+2022-12-30T15:28:23+00:00 ERROR Tt4b_Mapi_Class::create_open_source_app: Response: 
+
+http_request_failed: cURL error 28: Operation timed out after 5000 milliseconds with 0 bytes received
+
+2022-12-30T15:28:28+00:00 ERROR Tt4b_Mapi_Class::create_open_source_app: Response: 
+
+http_request_failed: cURL error 28: Operation timed out after 5000 milliseconds with 0 bytes received
+
+2022-12-30T15:28:29+00:00 DEBUG Tt4b_Mapi_Class::create_open_source_app: Response: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Content-Type: application/json
+X-Tt-Logid: 2022123015282777C9B1EB2112B643C7F6,2022123015282777C9B1EB2112B643C7F6
+x-tt-trace-host: 01de9d68f5cad760b0426af508ebe7cf87dd01bda3aa50a583a44d37a09f4cc1aee23cef94f19f65a33176fcbb4785bca0707710cc75343b2108b78e5b1a637f7df65136357ecee729c779e48ed6efe9b4f0614ddc31e04885a13fdac9baa6a10c0b062dcc81b68b9bc5356d7bba727f0f
+Content-Encoding: gzip
+Content-Length: 203
+X-Origin-Response-Time: 138,23.61.205.76
+X-Akamai-Request-ID: de0fc40b.2faddb9a
+Date: Fri, 30 Dec 2022 15:28:29 GMT
+X-Cache: TCP_MISS from a104-110-243-174.deploy.akamaitechnologies.com (AkamaiGHost/10.10.3-45298580) (-)
+Connection: close
+Vary: Accept-Encoding
+X-Cache-Remote: TCP_MISS from a23-61-205-76.deploy.akamaitechnologies.com (AkamaiGHost/10.10.3-45298580) (-)
+x-tt-trace-tag: id=16;cdn-cache=miss;type=dyn
+Server-Timing: cdn-cache; desc=MISS, edge; dur=217, origin; dur=138
+Server-Timing: inner; dur=133
+X-Parent-Response-Time: 353,104.110.243.174
+
+{"code":0,"msg":"ok","data":{"app_id":"7182963871248809985","external_data_key":"d64a630f-831e-44ba-8d03-21369dae4728","redirect_uri":"http:\/\/beeyouink.local\/wp-admin\/","app_secret":"61a96139eb041b6b95d17124a66e12fef7e28f08"}}
+
+2022-12-30T15:50:24+00:00 DEBUG tt4b_product_sync: missing access token for tt4b_product_sync
+2022-12-30T15:50:36+00:00 DEBUG tt4b_product_sync: missing access token for tt4b_product_sync
+2022-12-30T15:51:14+00:00 DEBUG tt4b_product_sync: missing access token for tt4b_product_sync
