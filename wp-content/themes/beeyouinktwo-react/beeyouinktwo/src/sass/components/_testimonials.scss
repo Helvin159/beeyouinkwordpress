@@ -3,6 +3,9 @@
 		padding: 10rem 0;
 	}
 	&__slider {
+		&__slide {
+			height: 25rem;
+		}
 		@media (min-width: 575px) {
 			padding: 0 2rem;
 		}

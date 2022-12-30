@@ -26,10 +26,10 @@ const Footer = () => {
 				<Row>
 					<Col sm={6} className='col-xs-12'>
 						<div className='mx-auto p-5 p-xs-3 text-xs-center'>
-							<Link to='/'>
-								<h3>BeeYou Ink</h3>
+							<Link tabIndex={0} to='/'>
+								<h3 tabIndex={0}>BeeYou Ink</h3>
 							</Link>
-							<p>
+							<p tabIndex={0}>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 								eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</p>
@@ -39,11 +39,13 @@ const Footer = () => {
 						<Row>
 							<Col>
 								<div className='mx-auto  p-0'>
-									<h4>BeeYou Ink</h4>
-									<ul>
+									<h4 tabIndex={0}>BeeYou Ink</h4>
+									<ul tabIndex={0}>
 										{pageData.data.pages.featured_pages.map((i, k) => (
-											<li key={k}>
-												<Link to={i.slug}>{i.page}</Link>
+											<li tabIndex={0} key={k}>
+												<Link tabIndex={0} to={i.slug}>
+													{i.page}
+												</Link>
 											</li>
 										))}
 									</ul>
@@ -51,11 +53,13 @@ const Footer = () => {
 							</Col>
 							<Col>
 								<div className='mx-auto p-0'>
-									<h4>Sub Pages</h4>
+									<h4 tabIndex={0}>Sub Pages</h4>
 									<ul>
 										{pageData.data.pages.all_pages.map((i, k) => (
-											<li key={k}>
-												<Link to={i.slug}>{i.page}</Link>
+											<li tabIndex={0} key={k}>
+												<Link tabIndex={0} to={i.slug}>
+													{i.page}
+												</Link>
 											</li>
 										))}
 									</ul>
@@ -63,10 +67,10 @@ const Footer = () => {
 							</Col>
 							<Col>
 								<div className='mx-auto p-0'>
-									<h4>Contact</h4>
+									<h4 tabIndex={0}>Contact</h4>
 									<form method='post'>
-										<input type='email' placeholder='Contact me' />
-										<button type='submit' onClick={handleSubmit}>
+										<input tabIndex={0} type='email' placeholder='Contact me' />
+										<button tabIndex={0} type='submit' onClick={handleSubmit}>
 											Submit
 										</button>
 									</form>
@@ -78,11 +82,15 @@ const Footer = () => {
 				<Row className='no-gutters py-4'>
 					<Col sm={10} className='col-xs-12 text-xs-center'>
 						<div className='mx-auto'>
-							<p className='m-0'>Copyright</p>
+							<p tabIndex={0} className='m-0'>
+								Copyright
+							</p>
 						</div>
 					</Col>
 					<Col sm={2} className='col-xs-12 text-xs-center'>
-						<div className='mx-auto'>Social Media</div>
+						<div tabIndex={0} className='mx-auto'>
+							Social Media
+						</div>
 					</Col>
 				</Row>
 			</footer>

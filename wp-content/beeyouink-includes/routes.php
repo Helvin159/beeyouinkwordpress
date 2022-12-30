@@ -26,6 +26,11 @@ function beeYouInkData($data){
     $components = new WP_Query(array(
         'post_type'=>'components'
     ));
+    wp_reset_query();    
+    
+    $posts = new WP_Query(array(
+        'post_type'=>'post'
+    ));
     wp_reset_query();
 
     $pages = new WP_Query(array(
@@ -83,6 +88,7 @@ function beeYouInkData($data){
                 'quad'=>array()
             )
         ),
+        'blog_posts'=>array(),
         'hero'=>array(),
         'story_text'=>array(),
         'articles'=>array(),
@@ -176,6 +182,25 @@ function beeYouInkData($data){
             'url'=>get_the_permalink(),
             'post_id'=>get_the_ID(),
             'slug'=>$post->post_name,
+
+
+        ));
+    } 
+    
+    while($posts->have_posts()){
+        $posts->the_post();
+        global $post;
+        global $author_id;
+        array_push($results['blog_posts'], array(
+            'post_id'=>get_the_ID(),
+            'title'=>get_the_title(),      
+            'content'=>get_the_content(),
+            'author'=>get_the_author(),
+            'image'=>get_the_post_thumbnail_url(),
+            'author_first_name'=>get_the_author_meta('first_name'),
+            'author_last_name'=>get_the_author_meta('last_name'),
+            'slug'=>$post->post_name,
+            'url'=>get_the_permalink(),
 
 
         ));

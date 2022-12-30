@@ -123,6 +123,38 @@ footer {
 .pr-1 {
   padding-right: 0.25rem !important; }
 
+@media (max-width: 768px) {
+  .px-xs-5 {
+    padding-right: 1.25rem !important;
+    padding-left: 1.25rem !important; }
+  .px-xs-4 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important; }
+  .px-xs-3 {
+    padding-right: 0.75rem !important;
+    padding-left: 0.75rem !important; }
+  .px-xs-2 {
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important; }
+  .px-xs-1 {
+    padding-right: 0.25rem !important;
+    padding-left: 0.25rem !important; }
+  .py-xs-5 {
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important; }
+  .py-xs-4 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important; }
+  .py-xs-3 {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important; }
+  .py-xs-2 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important; }
+  .py-xs-1 {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important; } }
+
 .m-0 {
   margin: 0 !important; }
 
@@ -236,7 +268,15 @@ footer .row {
   position: relative; }
   .slick-slider-hero__card img {
     width: 100vw;
-    max-height: 90vh; }
+    max-height: 30vh; }
+  @media (min-width: 575px) {
+    .slick-slider-hero__card img {
+      height: 45vh;
+      max-height: 45vh; } }
+  @media (min-width: 768px) {
+    .slick-slider-hero__card img {
+      height: 90vh;
+      max-height: 90vh; } }
   .slick-slider-hero__card__text {
     position: absolute;
     bottom: 7%;
@@ -302,6 +342,15 @@ footer .row {
   .slick-slider-hero .slick-prev {
     display: none !important; } }
 
+.single-hero {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+  .single-hero__container {
+    max-width: 920px;
+    margin: 0 auto;
+    color: white; }
+
 .PageCollagecomponent .small-cards {
   min-height: 15rem;
   height: 18rem !important;
@@ -339,10 +388,6 @@ footer .row {
   background-position: center center;
   height: 100%;
   position: relative; }
-
-@media (max-width: 575px) {
-  .PageCollagecomponent .big-card {
-    display: none; } }
 
 .team-showcase__team-cards__card {
   position: relative; }
@@ -393,6 +438,9 @@ footer .row {
 .testimonials__wrapper {
   padding: 10rem 0; }
 
+.testimonials__slider__slide {
+  height: 25rem; }
+
 @media (min-width: 575px) {
   .testimonials__slider {
     padding: 0 2rem; } }
@@ -433,12 +481,12 @@ footer .row {
   .recent-articles a {
     text-decoration: none;
     color: var(black); }
-  @media (min-width: 576px) {
+  @media (min-width: 575px) {
     .recent-articles {
       padding: 10rem 0 10rem 10rem !important; } }
   @media (max-width: 768px) {
     .recent-articles {
-      padding: 10rem 2rem 10rem 2rem !important; } }
+      padding: 4rem 2rem 4rem 2rem !important; } }
   @media (max-width: 625px) {
     .recent-articles__desktop {
       display: none !important; } }

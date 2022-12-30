@@ -23,12 +23,12 @@ const PageCollage = () => {
 							.map(
 								(i, k) => `
 								.card-${k}{
-									
 									${
 										k === 1 || k === 2
 											? `background:linear-gradient(180deg,rgba(0,0,0,0.5), rgba(0,0,0,1)), url(${i.featured_image});`
 											: `background:url(${i.featured_image});`
 									}
+
 									margin:${
 										k === 0
 											? '0 0 .5rem .5rem'
@@ -45,8 +45,14 @@ const PageCollage = () => {
 										? `@media (max-width: 575px) {
 												.card-${k}{
 													margin:${k === 3 ? '.5rem 0 0 1rem' : ''};
+
 												}}`
 										: ''
+								}
+								@media (max-width:575px){
+
+									.card-2{display:none;}
+									.card-1{display:none;}
 								}
 							`
 							)
@@ -73,13 +79,11 @@ const PageCollage = () => {
 										k <= 3 && (
 											<Col sm={6} className='p-0' key={`${k}-${i.page} `}>
 												<div className={`small-cards card-${k} `}>
-													{(k === 0 || k === 3) && (
-														<div className='small-cards__text'>
-															<h3>
-																<Link to={i.slug}>{i.page}</Link>
-															</h3>
-														</div>
-													)}
+													<div className='small-cards__text'>
+														<h3>
+															<Link to={i.slug}>{i.page}</Link>
+														</h3>
+													</div>
 												</div>
 											</Col>
 										)
@@ -91,6 +95,29 @@ const PageCollage = () => {
 			</Fragment>
 		)
 	}
+}
+
+const LimitCollageLinks = ({ data }) => {
+	return (
+		<Fragment>
+			{data.map(
+				(i, k) =>
+					k <= 3 && (
+						<Col sm={6} className='p-0' key={`${k}-${i.page} `}>
+							<div className={`small-cards card-${k} `}>
+								{(k === 0 || k === 3) && (
+									<div className='small-cards__text'>
+										<h3>
+											<Link to={i.slug}>{i.page}</Link>
+										</h3>
+									</div>
+								)}
+							</div>
+						</Col>
+					)
+			)}
+		</Fragment>
+	)
 }
 
 export default PageCollage

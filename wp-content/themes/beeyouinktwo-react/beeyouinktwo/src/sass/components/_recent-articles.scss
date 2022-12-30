@@ -5,12 +5,12 @@
 	}
 	overflow: hidden;
 
-	@media (min-width: 576px) {
+	@media (min-width: 575px) {
 		padding: 10rem 0 10rem 10rem !important;
 	}
 
 	@media (max-width: 768px) {
-		padding: 10rem 2rem 10rem 2rem !important;
+		padding: 4rem 2rem 4rem 2rem !important;
 		// display: none;
 	}
 

@@ -17,14 +17,11 @@ import Blog from './pages/Blog'
 import ScrollToTop from './lib/ScrollToTop'
 import Outlet from './pages/Outlet'
 import axios from 'axios'
-import MyData from './lib/data.json'
 import TattooArchiveSingle from './pages/TattooArchiveSingle'
 import TeamArciveSingle from './pages/TeamArchiveSingle'
 import ArticleArchiveSingle from './pages/ArticleArchiveSingle'
 
 const App = () => {
-	const [MyWpData, setMyWpData] = useState(null)
-
 	const { pageData, setPageData } = useContext(PageContext)
 
 	const url =
@@ -41,7 +38,6 @@ const App = () => {
 				url: `${url}/wp-json/beeYouInk/v1/mainData`,
 			})
 			.then((res) => {
-				setMyWpData(res)
 				setPageData(res)
 			})
 			.catch((e) => {
@@ -59,9 +55,7 @@ const App = () => {
 				<Fragment>
 					<ScrollToTop>
 						<Routes>
-							<Route
-								path='/'
-								element={<Outlet props={MyData} wpData={MyWpData.data} />}>
+							<Route path='/' element={<Outlet />}>
 								<Route index path='/' element={<Home />} />
 
 								{pageData.data.pages.all_pages.map((i, k) =>
@@ -111,6 +105,10 @@ const App = () => {
 												path={`portfolio/${i.slug}`}
 												element={<TeamArciveSingle wpData={i} />}
 											/>
+											<Route
+												path={`articles/${i.slug}`}
+												element={<TeamArciveSingle wpData={i} />}
+											/>
 										</Fragment>
 									))
 								}
@@ -120,7 +118,7 @@ const App = () => {
 									pageData.data.tattoo_work.map((i, k) => (
 										<Fragment key={k}>
 											<Route
-												path={`${i.slug}`}
+												path={`/${i.slug}`}
 												element={<TattooArchiveSingle wpData={i} />}
 											/>
 											<Route
@@ -134,16 +132,14 @@ const App = () => {
 								{
 									// Article Post Type Single Post
 									pageData.data.articles.map((i, k) => (
-										<Fragment>
+										<Fragment key={k}>
 											<Route
 												path={`${i.slug}`}
 												element={<ArticleArchiveSingle wpData={i} />}
-												key={k}
 											/>
 											<Route
-												path={`article/${i.slug}`}
+												path={`articles/${i.slug}`}
 												element={<ArticleArchiveSingle wpData={i} />}
-												key={k}
 											/>
 										</Fragment>
 									))

@@ -65,17 +65,23 @@ const RecentArticlesComponent = () => {
 								<div key={k}>
 									<Row className='recent-articles__wrapper__slider__row'>
 										<Col className='col-6  recent-articles__wrapper__slider__row__left-card'>
-											<h4 className='overflow-scroll'>{i.title}</h4>
+											<h4 tabIndex={0} className='overflow-scroll'>
+												{i.title}
+											</h4>
 
 											{i.article_date !== '' ? (
-												<p className='left-card-date'>
+												<p tabIndex={0} className='left-card-date'>
 													{`${month} · `}
-													<span className='month-span'>{`${day}`}</span>
+													<span
+														tabIndex={0}
+														className='month-span'>{`${day}`}</span>
 												</p>
 											) : (
-												<p className='left-card-date'>No date</p>
+												<p tabIndex={0} className='left-card-date'>
+													No date
+												</p>
 											)}
-											<Link to={`${i.slug}`}>
+											<Link tabIndex={0} to={`${i.slug}`}>
 												Read more <span>{' >'}</span>
 											</Link>
 										</Col>
@@ -96,6 +102,7 @@ const RecentArticlesComponent = () => {
 								<div className='mx-auto text-center my-3 max-w-360' key={k}>
 									<div className='py-3'>
 										<img
+											tabIndex={0}
 											className='img-fluid max-w-260'
 											src={i.article_image}
 											alt={i.title}
@@ -103,17 +110,23 @@ const RecentArticlesComponent = () => {
 									</div>
 
 									{i.article_date !== '' ? (
-										<p className='left-card-date'>
+										<p tabIndex={0} className='left-card-date'>
 											{`${month} · `}
-											<span className='month-span'>{`${day}`}</span>
+											<span
+												tabIndex={0}
+												className='month-span'>{`${day}`}</span>
 										</p>
 									) : (
-										<p className='left-card-date'>No date</p>
+										<p tabIndex={0} className='left-card-date'>
+											No date
+										</p>
 									)}
-									<Link to={`${i.slug}`}>
-										<h4 className='overflow-scroll'>{i.title}</h4>
+									<Link tabIndex={0} to={`${i.slug}`}>
+										<h4 tabIndex={0} className='overflow-scroll'>
+											{i.title}
+										</h4>
 									</Link>
-									<Link to={`${i.slug}`}>
+									<Link tabIndex={0} to={`${i.slug}`}>
 										Read more <span>{' >'}</span>
 									</Link>
 								</div>

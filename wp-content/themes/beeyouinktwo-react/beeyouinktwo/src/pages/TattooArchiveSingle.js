@@ -1,29 +1,22 @@
-import React, { useContext } from 'react'
+import React, { Fragment, useContext } from 'react'
 import { PageContext } from '../lib/pageContext'
+import SingleHero from '../components/SingleHero'
+import TattooSingleContent from '../components/TattooSingleContent'
 
 const TattooArchiveSingle = ({ wpData }) => {
-	const data = useContext(PageContext)
+	const { pageData } = useContext(PageContext)
 
 	if (wpData) {
-		if (data) {
+		if (pageData) {
 			return (
-				<div className='max-w-1024 mx-auto text-center'>
-					<div className='py-5 max-w-860 mx-auto'>
-						<h1 tabIndex={0}>{wpData.title}</h1>
-
-						<div
-							className='max-w-760 mx-auto'
-							tabIndex={0}
-							dangerouslySetInnerHTML={{ __html: wpData.content }}
-						/>
-						<img
-							className='img-fluid'
-							src={wpData.image}
-							alt={wpData.title}
-							tabIndex={0}
-						/>
+				<Fragment>
+					<SingleHero title={wpData.title} background={wpData.image} />
+					<div className='max-w-1024 py-5 mx-auto text-center'>
+						<div className='max-w-860 mx-auto'>
+							<TattooSingleContent wpData={wpData} />
+						</div>
 					</div>
-				</div>
+				</Fragment>
 			)
 		}
 	}

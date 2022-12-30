@@ -13,13 +13,16 @@ const StoryTextComponent = () => {
 						e.show_story && (
 							<div key={i}>
 								<div
+									tabIndex={0}
 									className='story-text__card__copy didot'
 									dangerouslySetInnerHTML={{
 										__html: e.story_content,
 									}}
 								/>
-								<h5>{e.author}</h5>
-								<p className='story-text__card__author'>{e.quoted_artist}</p>
+								<h5 tabIndex={0}>{e.author}</h5>
+								<p tabIndex={0} className='story-text__card__author'>
+									{e.quoted_artist}
+								</p>
 							</div>
 						)
 				)}

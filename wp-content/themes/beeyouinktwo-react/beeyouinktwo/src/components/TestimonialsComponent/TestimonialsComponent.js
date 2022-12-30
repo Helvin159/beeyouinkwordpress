@@ -27,14 +27,19 @@ const TestimonialsComponent = () => {
 						<div
 							key={k}
 							className='testimonials__slider__slide text-center p-5 px-xs-0 mx-auto'>
-							<p className='testimonials__slider__slide__quoteChar font-red'>
+							<p
+								tabIndex={0}
+								className='testimonials__slider__slide__quoteChar font-red'>
 								"
 							</p>
 							<div
+								tabIndex={0}
 								className='testimonials__slider__slide__quote'
 								dangerouslySetInnerHTML={{ __html: i.content }}
 							/>
-							<p className='testimonials__slider__slide__customer'>{i.title}</p>
+							<p tabIndex={0} className='testimonials__slider__slide__customer'>
+								{i.title}
+							</p>
 						</div>
 					))}
 				</Slider>

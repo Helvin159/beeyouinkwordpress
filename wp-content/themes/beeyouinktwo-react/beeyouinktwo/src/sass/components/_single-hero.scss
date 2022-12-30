@@ -1,0 +1,12 @@
+.single-hero {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	&__container {
+		max-width: 920px;
+		margin: 0 auto;
+		color: $altColor;
+	}
+}
+

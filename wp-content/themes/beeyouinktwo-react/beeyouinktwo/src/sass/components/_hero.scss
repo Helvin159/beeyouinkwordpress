@@ -4,7 +4,20 @@
 
 		& img {
 			width: 100vw;
-			max-height: 90vh;
+			max-height: 30vh;
+		}
+
+		@media (min-width: 575px) {
+			& img {
+				height: 45vh;
+				max-height: 45vh;
+			}
+		}
+		@media (min-width: 768px) {
+			& img {
+				height: 90vh;
+				max-height: 90vh;
+			}
 		}
 
 		&__text {

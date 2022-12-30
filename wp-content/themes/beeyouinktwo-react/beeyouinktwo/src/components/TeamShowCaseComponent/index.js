@@ -31,10 +31,10 @@ const TeamShowCaseComponent = () => {
 							<div
 								className={`team-showcase__team-cards__card__${k} team-showcase__team-cards__card__inner p-3`}>
 								<div className='team-showcase__team-cards__card__inner__member-info'>
-									<Link to={i.profile_url}>
-										<h3>{i.name}</h3>
+									<Link tabIndex={0} to={i.profile_url}>
+										<h3 tabIndex={0}>{i.name}</h3>
 									</Link>
-									<p>{i.position}</p>
+									<p tabIndex={0}>{i.position}</p>
 								</div>
 							</div>
 						</Col>

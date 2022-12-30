@@ -36,11 +36,13 @@ const SimpleSlider = ({ props }) => {
 				{props.map((i, k) => (
 					<div key={k} className='slick-slider-hero__card'>
 						<div className='slick-slider-hero__card__text'>
-							<p>{i.intro_text}</p>
-							<h1>{i.heading}</h1>
-							<Link to={i.slug}>View More</Link>
+							<p tabIndex={0}>{i.intro_text}</p>
+							<h1 tabIndex={0}>{i.heading}</h1>
+							<Link tabIndex={0} to={i.slug}>
+								View More
+							</Link>
 						</div>
-						<img src={i.home_hero_image} alt={i.title} />
+						<img tabIndex={0} src={i.home_hero_image} alt={i.title} />
 					</div>
 				))}
 			</Slider>
