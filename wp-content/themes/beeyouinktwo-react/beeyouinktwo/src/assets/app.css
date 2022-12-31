@@ -87,6 +87,12 @@ footer {
 .max-w-260 {
   max-width: 260px; }
 
+.max-w-100 {
+  max-width: 100px; }
+
+.max-w-50 {
+  max-width: 50px; }
+
 .w-100 {
   width: 100% !important; }
 
@@ -253,6 +259,17 @@ footer {
       text-transform: uppercase; }
   .navigation__items__links__info a {
     text-transform: uppercase; }
+  .navigation__cart-drop-down {
+    width: 350px;
+    height: 500px;
+    background: white;
+    position: absolute;
+    top: 5.15rem;
+    right: 2rem;
+    z-index: 1000;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem; }
 
 footer .row {
   padding: 2.8125rem 1.25rem 0.5rem 1.25rem; }

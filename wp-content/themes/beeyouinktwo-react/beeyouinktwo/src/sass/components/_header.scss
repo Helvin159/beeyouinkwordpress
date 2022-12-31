@@ -52,5 +52,19 @@
 			}
 		}
 	}
+
+	&__cart-drop-down {
+		width: 350px;
+		height: 500px;
+		background: $altColor;
+		// border: 1px solid black;
+		position: absolute;
+		top: 5.15rem;
+		right: 2rem;
+		z-index: 1000;
+		box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+		border-bottom-left-radius: 0.5rem;
+		border-bottom-right-radius: 0.5rem;
+	}
 }
 

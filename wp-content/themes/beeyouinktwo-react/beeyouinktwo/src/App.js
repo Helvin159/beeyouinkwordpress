@@ -17,11 +17,12 @@ import ArticleArchiveSingle from './pages/ArticleArchiveSingle'
 import { ProductContext } from './lib/productContext'
 import Products from './pages/Products'
 import SingleProduct from './pages/SingleProduct'
+import Checkout from './pages/Checkout'
 
 const App = () => {
 	const { pageData, setPageData } = useContext(PageContext)
 	const { products, setProducts } = useContext(ProductContext)
-
+	console.log(products)
 	const url =
 		window.location.hostname === 'localhost'
 			? 'http://beeyouink.local'
@@ -93,6 +94,12 @@ const App = () => {
 										<Route
 											path={`/${i.page.toLowerCase()}`}
 											element={<Products />}
+											key={k}
+										/>
+									) : i.page.toLowerCase() === 'checkout' ? (
+										<Route
+											path={`/${i.page.toLowerCase()}`}
+											element={<Checkout />}
 											key={k}
 										/>
 									) : (
