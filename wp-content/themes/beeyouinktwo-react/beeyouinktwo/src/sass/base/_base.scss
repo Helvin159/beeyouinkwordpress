@@ -157,6 +157,16 @@ footer {
 	}
 }
 
+.font {
+	&-24 {
+		font-size: 24px;
+	}
+
+	&-27 {
+		font-size: 27px;
+	}
+}
+
 .pl {
 	&-5 {
 		padding-left: 1.25rem !important;

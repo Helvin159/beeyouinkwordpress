@@ -1,12 +1,11 @@
 import React from 'react'
 import BlogPosts from '../components/BlogPosts'
+import SingleHero from '../components/SingleHero'
 
 const Blog = () => {
 	return (
 		<div>
-			<div className='max-w-920 mx-auto text-center aligncenter py-5'>
-				<h1>My Blog!</h1>
-			</div>
+			<SingleHero title='My Blog!' subTitle={null} background='null' />
 			<BlogPosts />
 		</div>
 	)

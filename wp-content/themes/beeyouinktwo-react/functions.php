@@ -13,7 +13,7 @@ function beeyou_files(){
   // ******* CSS FILES ******************
   // ************************************ 
   // My Style
-  wp_enqueue_style('styles', get_theme_file_uri('./static/css/main.9f74f9f2.css'));
+  wp_enqueue_style('styles', get_theme_file_uri('./static/css/main.f56ecf23.css'));
   
   // Bootstrap CSS
   wp_enqueue_style('bootstrap', '//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
@@ -38,7 +38,7 @@ function beeyou_files(){
   // ******* Components *****************
   // ************************************ 
   // Main Script
-  wp_enqueue_script('beeYouData-script', get_theme_file_uri('./static/js/main.d19299ad.js'), NULL,'1.0',true );
+  wp_enqueue_script('beeYouData-script', get_theme_file_uri('./static/js/main.3f73cbb3.js'), NULL,'1.0',true );
 
 
   // Bootstrap Scripts
@@ -62,7 +62,7 @@ function beeyou_features(){
   add_theme_support('post-thumbnails');
 
   add_image_size('genericSquare', 300, 300, true);
-  add_image_size('Hero Slide', 1300, 788, true);
+  add_image_size('Hero Slide', 1300, 500, true);
   add_image_size('Recent Article Slide', 255, 275, true);
 }
 

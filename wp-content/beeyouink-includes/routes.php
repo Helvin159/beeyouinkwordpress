@@ -147,10 +147,13 @@ function beeYouInkData($data){
         array_push($results['hero'], array(
             'title'=>get_the_title(),      
             'home_hero_image' => get_field('home_hero_image'),
+            'custom_size_image'=>get_the_post_thumbnail_url($post = get_the_ID(), $size='Hero Slide'),
             'intro_text' => get_field('intro_text'),
             'heading' => get_field('heading'),
             'url' => get_field('url'),
             'slug'=> $post->post_name,
+
+
         ));
     }
     

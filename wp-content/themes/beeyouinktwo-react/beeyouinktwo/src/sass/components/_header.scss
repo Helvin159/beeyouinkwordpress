@@ -65,6 +65,28 @@
 		box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
 		border-bottom-left-radius: 0.5rem;
 		border-bottom-right-radius: 0.5rem;
+
+		&__close-btn {
+			text-align: right;
+			padding: 1rem 1rem 0.5rem 0;
+
+			& button {
+				background: none;
+				border: none;
+				margin: 0;
+			}
+		}
+
+		&__checkout-btn-container {
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+		}
+
+		&__cart-items {
+			overflow: scroll;
+			max-height: 350px;
+		}
 	}
 }
 

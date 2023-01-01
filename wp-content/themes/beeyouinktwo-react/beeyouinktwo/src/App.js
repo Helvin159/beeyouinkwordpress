@@ -93,13 +93,13 @@ const App = () => {
 									) : i.page.toLowerCase() === 'shop' ? (
 										<Route
 											path={`/${i.page.toLowerCase()}`}
-											element={<Products />}
+											element={<Products data={i} />}
 											key={k}
 										/>
 									) : i.page.toLowerCase() === 'checkout' ? (
 										<Route
 											path={`/${i.page.toLowerCase()}`}
-											element={<Checkout />}
+											element={<Checkout data={i} />}
 											key={k}
 										/>
 									) : (

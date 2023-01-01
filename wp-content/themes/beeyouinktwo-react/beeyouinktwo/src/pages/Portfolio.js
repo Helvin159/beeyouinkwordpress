@@ -1,6 +1,7 @@
 import React, { Fragment, useContext } from 'react'
 import { PageContext } from '../lib/pageContext'
 import PortfolioGallery from '../components/PortfolioGallery'
+import SingleHero from '../components/SingleHero'
 
 const Portfolio = () => {
 	const { pageData } = useContext(PageContext)
@@ -8,10 +9,8 @@ const Portfolio = () => {
 
 	return (
 		<Fragment>
+			<SingleHero title='My Artwork' subTitle={null} background={null} />
 			<div className='portfolio'>
-				<div className='max-w-920 portfolio__header mx-auto text-center aligncenter py-5'>
-					<h1>My Artwork!</h1>
-				</div>
 				<PortfolioGallery props={data.tattoo_work} />
 			</div>
 		</Fragment>

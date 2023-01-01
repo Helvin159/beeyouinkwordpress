@@ -1,30 +1,33 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { Link } from 'react-router-dom'
 
 const CartItem = ({ cartItem }) => {
 	let cartItemPrice = cartItem.price * cartItem.quantity
 
 	return (
-		<div>
+		<Fragment>
 			<Row className='py-2 px-3'>
 				<Col className='col-3'>
-					<img
-						src={cartItem.images[0].src}
-						className='img-fluid max-w-50'
-						alt={cartItem.name}
-					/>
+					<Link to={cartItem.slug}>
+						<img
+							src={cartItem.images[0].src}
+							className='img-fluid max-w-50'
+							alt={cartItem.name}
+						/>
+					</Link>
 				</Col>
 				<Col className='py-3'>
-					<p className='m-0'>
+					<Link className='m-0' to={cartItem.slug}>
 						{cartItem.quantity} X {cartItem.name}
-					</p>
+					</Link>
 				</Col>
 				<Col className='col-3 py-3'>
 					<p>${cartItemPrice}</p>
 				</Col>
 			</Row>
-		</div>
+		</Fragment>
 	)
 }
 

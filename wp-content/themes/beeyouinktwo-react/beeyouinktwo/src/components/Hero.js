@@ -23,7 +23,7 @@ const SimpleSlider = ({ props }) => {
 		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		adaptiveHeight: true,
+		adaptiveHeight: false,
 		fade: true,
 		autoplay: true,
 		autoplaySpeed: 5000,
@@ -31,21 +31,24 @@ const SimpleSlider = ({ props }) => {
 	}
 
 	return (
-		<div className='slick-slider-hero'>
-			<Slider {...settings}>
-				{props.map((i, k) => (
-					<div key={k} className='slick-slider-hero__card'>
-						<div className='slick-slider-hero__card__text'>
-							<p tabIndex={0}>{i.intro_text}</p>
-							<h1 tabIndex={0}>{i.heading}</h1>
-							<Link tabIndex={0} to={i.slug}>
-								View More
-							</Link>
+		<div className='hero'>
+			<div className='slick-slider-hero'>
+				<Slider {...settings}>
+					{props.map((i, k) => (
+						<div key={k} className='slick-slider-hero__card'>
+							<div className='slick-slider-hero__card__text'>
+								<p tabIndex={0}>{i.intro_text}</p>
+								<h1 tabIndex={0}>{i.heading}</h1>
+								<Link tabIndex={0} to={i.slug}>
+									View More
+								</Link>
+							</div>
+
+							<img tabIndex={0} src={i.custom_size_image} alt={i.title} />
 						</div>
-						<img tabIndex={0} src={i.home_hero_image} alt={i.title} />
-					</div>
-				))}
-			</Slider>
+					))}
+				</Slider>
+			</div>
 		</div>
 	)
 }

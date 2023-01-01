@@ -5,43 +5,46 @@ import Container from 'react-bootstrap/esm/Container'
 import Row from 'react-bootstrap/esm/Row'
 import Slider from 'react-slick'
 import AddToCartBtn from '../components/AddToCartBtn'
+import SingleHero from '../components/SingleHero'
 
 const SingleProduct = ({ product }) => {
 	console.log(product)
 	return (
 		<Fragment>
-			<Container fluid>
-				<div></div>
-				<Row className='p-5 max-w-860 mx-auto'>
-					<Col sm={6} className='col-12'>
-						{product.images.length > 0 ? (
-							<SimpleSlider props={product.images} />
-						) : (
-							<img src={product.images[0].src} alt={product.name} />
-						)}
-					</Col>
-					<Col sm={6} className='col-12'>
-						<h2>{product.name}</h2>
-						<div dangerouslySetInnerHTML={{ __html: product.description }} />
+			<SingleHero
+				title={product.name}
+				subTitle={null}
+				background={product.images[0].src}
+			/>
+			<Row className='p-5 max-w-860 mx-auto'>
+				<Col sm={6} className='col-12'>
+					{product.images.length > 0 ? (
+						<SimpleSlider props={product.images} />
+					) : (
+						<img src={product.images[0].src} alt={product.name} />
+					)}
+				</Col>
+				<Col sm={6} className='col-12'>
+					<h2>{product.name}</h2>
+					<div dangerouslySetInnerHTML={{ __html: product.description }} />
 
-						<div className='py-2'>
-							<ul className='p-0 m-0'>
-								<li className='px-0 py-1 m-0'>Price: ${product.price}</li>
-								<li className='px-0 py-1 m-0'>
-									Stock:
-									{product.stock_status === 'instock'
-										? ' Available'
-										: ' Sold out'}
-								</li>
-								<li className='px-0 py-1 m-0'>
-									<input type='number' id='quantityInput' defaultValue={1} />
-								</li>
-							</ul>
-						</div>
-						<AddToCartBtn id={product.id} product={product} />
-					</Col>
-				</Row>
-			</Container>
+					<div className='py-2'>
+						<ul className='p-0 m-0'>
+							<li className='px-0 py-1 m-0'>Price: ${product.price}</li>
+							<li className='px-0 py-1 m-0'>
+								Stock:
+								{product.stock_status === 'instock'
+									? ' Available'
+									: ' Sold out'}
+							</li>
+							<li className='px-0 py-1 m-0'>
+								<input type='number' id='quantityInput' defaultValue={1} />
+							</li>
+						</ul>
+					</div>
+					<AddToCartBtn id={product.id} product={product} />
+				</Col>
+			</Row>
 		</Fragment>
 	)
 }
