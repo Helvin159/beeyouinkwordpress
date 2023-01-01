@@ -13,7 +13,7 @@ function beeyou_files(){
   // ******* CSS FILES ******************
   // ************************************ 
   // My Style
-  wp_enqueue_style('styles', get_theme_file_uri('./static/css/main.028e2cbc.css'));
+  wp_enqueue_style('styles', get_theme_file_uri('./static/css/main.0a00b010.css'));
   
   // Bootstrap CSS
   wp_enqueue_style('bootstrap', '//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
@@ -38,7 +38,7 @@ function beeyou_files(){
   // ******* Components *****************
   // ************************************ 
   // Main Script
-  wp_enqueue_script('beeYouData-script', get_theme_file_uri('./static/js/main.d1af93a5.js'), NULL,'1.0',true );
+  wp_enqueue_script('beeYouData-script', get_theme_file_uri('./static/js/main.8e494209.js'), NULL,'1.0',true );
 
 
   // Bootstrap Scripts

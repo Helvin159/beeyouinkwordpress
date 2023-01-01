@@ -20,10 +20,10 @@ const Home = () => {
 			<SectionTitle title='Some of my previous work' />
 			<PortfolioGallery limit={6} props={data.tattoo_work} />
 			<ViewMoreBtn slug='/portfolio' />
-			<RecentArticlesComponent />
 			<PageCollage />
 			<TestimonialsComponent />
 			{
+				// <RecentArticlesComponent />
 				// <TeamShowCaseComponent />
 				// <StoryTextComponent />
 			}
