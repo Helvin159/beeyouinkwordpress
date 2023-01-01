@@ -204,6 +204,7 @@ function beeYouInkData($data){
             'author_last_name'=>get_the_author_meta('last_name'),
             'slug'=>$post->post_name,
             'url'=>get_the_permalink(),
+            'post_date'=>get_the_date()
 
 
         ));

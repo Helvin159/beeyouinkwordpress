@@ -8,10 +8,10 @@ const Products = ({ data }) => {
 		<Fragment>
 			<SingleHero
 				title={'Products'}
-				subTitle={'Unique art by Melli!'}
+				subTitle={null}
 				background={data.featured_image}
 			/>
-			<Container className='p-5'>
+			<Container className='py-5'>
 				<ProductGallery />
 			</Container>
 		</Fragment>

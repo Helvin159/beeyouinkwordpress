@@ -108,6 +108,9 @@ footer {
 .font-27 {
   font-size: 27px; }
 
+.font-48 {
+  font-size: 48px; }
+
 .pl-5 {
   padding-left: 1.25rem !important; }
 
@@ -181,6 +184,19 @@ footer {
 
 .overflow-scroll {
   overflow: scroll; }
+
+.btn-clear {
+  display: block;
+  color: white;
+  transition: ease 0.25s;
+  text-transform: uppercase;
+  font-size: 12px;
+  border: 1px solid white;
+  text-align: center;
+  padding: 0.6rem 1.5rem;
+  width: 100%;
+  position: relative;
+  z-index: 1; }
 
 @media (max-width: 575px) {
   .d-xs-none {
@@ -311,7 +327,6 @@ footer .row {
     width: 100vw; }
     .hero .slick-slider-hero__card {
       position: relative;
-      height: 30vh;
       width: 100vw; }
       .hero .slick-slider-hero__card img {
         height: 100%;
@@ -342,12 +357,6 @@ footer .row {
         .hero .slick-slider-hero__card__text a:hover {
           color: #c50000;
           background-color: white; }
-    @media (min-width: 575px) {
-      .hero .slick-slider-hero__card {
-        height: 55vh; } }
-    @media (min-width: 821px) {
-      .hero .slick-slider-hero__card {
-        height: 70vh; } }
     .hero .slick-slider-hero .slick-next,
     .hero .slick-slider-hero .slick-prev {
       position: absolute;
@@ -474,7 +483,7 @@ footer .row {
         margin-left: 4rem; } }
 
 .testimonials__wrapper {
-  padding: 10rem 0; }
+  padding: 6rem 0; }
 
 .testimonials__slider__slide {
   height: 25rem; }
@@ -521,7 +530,7 @@ footer .row {
     color: var(black); }
   @media (min-width: 575px) {
     .recent-articles {
-      padding: 10rem 0 10rem 10rem !important; } }
+      padding: 6rem 0 6rem 10rem !important; } }
   @media (max-width: 768px) {
     .recent-articles {
       padding: 4rem 2rem 4rem 2rem !important; } }
@@ -602,7 +611,8 @@ footer .row {
   background-position: center center !important;
   background-repeat: no-repeat !important;
   height: 260px;
-  width: 260px;
+  width: 100%;
+  max-width: 260px;
   margin: 0.5rem auto;
   padding: 0; }
   .products-container__col__card__title {
@@ -611,7 +621,8 @@ footer .row {
     width: 100%;
     padding: 1rem;
     background: rgba(0, 0, 0, 0.75);
-    color: white !important; }
+    color: white !important;
+    transition: ease-in 0.23s; }
     .products-container__col__card__title a {
       color: white !important; }
     .products-container__col__card__title h4,
@@ -620,6 +631,9 @@ footer .row {
       padding: 0; }
   .products-container__col__card__content {
     opacity: 0; }
+
+.products-container__col__card__title:hover {
+  padding: 2rem 1rem; }
 
 .slick-slider-product__img {
   height: 260px !important;

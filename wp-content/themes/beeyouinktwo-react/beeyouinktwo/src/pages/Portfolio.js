@@ -9,8 +9,12 @@ const Portfolio = () => {
 
 	return (
 		<Fragment>
-			<SingleHero title='My Artwork' subTitle={null} background={null} />
-			<div className='portfolio'>
+			<SingleHero
+				title='My Artwork'
+				subTitle={null}
+				background={data.tattoo_work[0].image}
+			/>
+			<div className='portfolio py-5'>
 				<PortfolioGallery props={data.tattoo_work} />
 			</div>
 		</Fragment>
