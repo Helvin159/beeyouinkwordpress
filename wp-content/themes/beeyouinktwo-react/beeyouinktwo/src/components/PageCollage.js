@@ -49,11 +49,6 @@ const PageCollage = () => {
 												}}`
 										: ''
 								}
-								@media (max-width:575px){
-
-									.card-2{display:none;}
-									.card-1{display:none;}
-								}
 							`
 							)
 							.join('')}

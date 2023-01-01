@@ -40,7 +40,7 @@ const RecentArticlesComponent = () => {
 				)
 				.join('')}
 			`}</style>
-			<Container className='recent-articles' fluid>
+			<Container className='recent-articles d-md-none' fluid>
 				<div className='recent-articles__header'>
 					<Row>
 						<Col className='col-10'>

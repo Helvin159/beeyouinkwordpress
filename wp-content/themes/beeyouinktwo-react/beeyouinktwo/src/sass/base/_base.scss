@@ -99,8 +99,18 @@ footer {
 }
 
 .w {
+	// By viewport width
 	&-100vw {
 		width: 100vw;
+	}
+
+	&-95vw {
+		width: 95vw;
+	}
+
+	// By Percentage
+	&-100 {
+		width: 100%;
 	}
 }
 
