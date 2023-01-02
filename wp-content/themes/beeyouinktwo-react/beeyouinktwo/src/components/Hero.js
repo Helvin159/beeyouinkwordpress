@@ -41,6 +41,8 @@ const SimpleSlider = ({ props }) => {
 										background:url(${i.custom_size_image});
 										background-size:cover;
 										background-repeat:no-repeat;
+										background-position:center center;
+										
 									}
 								`}
 							</style>
