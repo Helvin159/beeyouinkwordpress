@@ -628,6 +628,9 @@ footer .row {
   max-width: 260px;
   margin: 0.5rem auto;
   padding: 0; }
+  @media (max-width: 575px) {
+    .products-container__col__card {
+      max-width: 100%; } }
   .products-container__col__card__title {
     position: absolute;
     bottom: 0;

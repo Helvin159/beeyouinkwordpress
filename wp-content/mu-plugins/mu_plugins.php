@@ -31,6 +31,7 @@ function bee_you_ink_post_types(){
       'singular_name' => 'Component',
     ),
     'menu_icon' => 'dashicons-index-card', 
+    
     // 'capabilities'=> array(
     // 'edit_post' => false,
     // 'edit_published_posts'=> false,
@@ -52,6 +53,7 @@ function bee_you_ink_post_types(){
       'singular_name' => 'Hero Slide',
     ),
     'menu_icon' => 'dashicons-laptop',
+    
   ));
   
   register_post_type('story_text', array(
@@ -68,6 +70,7 @@ function bee_you_ink_post_types(){
       'singular_name' => 'Story Text',
     ),
     'menu_icon' => 'dashicons-text-page',
+    
     
   ));
   
@@ -86,6 +89,7 @@ function bee_you_ink_post_types(){
       'singular_name' => 'Article',
     ),
     'menu_icon' => 'dashicons-slides',
+    
   ));
 
   register_post_type('testimonial', array(
@@ -118,6 +122,7 @@ function bee_you_ink_post_types(){
     ),
     'has_archive'=>true,
     'menu_icon' => 'dashicons-admin-customizer',
+    
   ));
   
   register_post_type('team', array(
@@ -135,6 +140,7 @@ function bee_you_ink_post_types(){
     ),
     'has_archive'=>true,
     'menu_icon' => 'dashicons-groups',
+    
   ));
 
   remove_post_type_support('page', 'editor');
