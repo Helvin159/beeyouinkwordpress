@@ -1,5 +1,5 @@
 import React, { Fragment, useContext } from 'react'
-import { PageContext } from '../lib/pageContext'
+import { PageContext } from '../lib/PageContext'
 import PortfolioGallery from '../components/PortfolioGallery'
 import SingleHero from '../components/SingleHero'
 

@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 
 import App from './App'
-import { PageProvider } from './lib/pageContext'
-import { ProductProvider } from './lib/productContext'
+import { PageProvider } from './lib/PageContext'
+import { ProductProvider } from './lib/ProductContext'
 import { CartProvider } from './lib/CartContext'
 
 import reportWebVitals from './reportWebVitals'

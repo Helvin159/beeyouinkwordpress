@@ -1,6 +1,6 @@
 import React, { Fragment, useContext } from 'react'
 import SingleHero from '../components/SingleHero'
-import { PageContext } from '../lib/pageContext'
+import { PageContext } from '../lib/PageContext'
 
 const ArticleArchiveSingle = ({ wpData }) => {
 	const data = useContext(PageContext)

@@ -1,5 +1,5 @@
 import React, { Fragment, useContext } from 'react'
-import { PageContext } from '../lib/pageContext'
+import { PageContext } from '../lib/PageContext'
 import { CartContext } from '../lib/CartContext'
 import { Link } from 'react-router-dom'
 import Row from 'react-bootstrap/Row'

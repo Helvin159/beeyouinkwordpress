@@ -36,6 +36,7 @@ export const CartProvider = ({ children }) => {
 	const [cartItems, setCartItems] = useState(null)
 
 	const addItemToCart = (productToAdd) => {
+		setIsCartOpen(() => !isCartOpen)
 		setCartItems(addCartItem(cartItems, productToAdd))
 	}
 	const value = { isCartOpen, setIsCartOpen, cartItems, addItemToCart }

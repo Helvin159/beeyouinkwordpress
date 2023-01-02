@@ -21,7 +21,9 @@ const CartDropdown = () => {
 	return (
 		<div className={`navigation__cart-drop-down `}>
 			<div className='navigation__cart-drop-down__close-btn'>
-				<button onClick={toggleDropdown}>X</button>
+				<button className='font-27' onClick={toggleDropdown}>
+					&#10005;
+				</button>
 			</div>
 			<div className='navigation__cart-drop-down__cart-items '>
 				{

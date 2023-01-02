@@ -194,6 +194,9 @@ function beeYouInkData($data){
         $posts->the_post();
         global $post;
         global $author_id;
+
+        $post_type = get_post_type();
+
         array_push($results['blog_posts'], array(
             'post_id'=>get_the_ID(),
             'title'=>get_the_title(),      
@@ -204,9 +207,8 @@ function beeYouInkData($data){
             'author_last_name'=>get_the_author_meta('last_name'),
             'slug'=>$post->post_name,
             'url'=>get_the_permalink(),
-            'post_date'=>get_the_date()
-
-
+            'post_date'=>get_the_date(),
+            'archive_url'=>get_post_type_archive_link($post_type)
         ));
     }
 

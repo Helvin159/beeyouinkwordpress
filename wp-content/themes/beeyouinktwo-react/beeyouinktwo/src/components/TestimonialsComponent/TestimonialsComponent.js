@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageContext } from '../../lib/pageContext'
+import { PageContext } from '../../lib/PageContext'
 import { useContext } from 'react'
 import Container from 'react-bootstrap/Container'
 import Slider from 'react-slick'

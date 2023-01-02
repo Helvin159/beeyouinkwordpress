@@ -1,0 +1,8 @@
+2023-01-02T00:20:53+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function get_post_type_archive_link(), 0 passed in /Users/helvinrymer/Local Sites/beeyouink/app/public/wp-content/beeyouink-includes/routes.php on line 208 and exactly 1 expected in /Users/helvinrymer/Local Sites/beeyouink/app/public/wp-includes/link-template.php:1298
+Stack trace:
+#0 /Users/helvinrymer/Local Sites/beeyouink/app/public/wp-content/beeyouink-includes/routes.php(208): get_post_type_archive_link()
+#1 /Users/helvinrymer/Local Sites/beeyouink/app/public/wp-includes/rest-api/class-wp-rest-server.php(1171): beeYouInkData(Object(WP_REST_Request))
+#2 /Users/helvinrymer/Local Sites/beeyouink/app/public/wp-includes/rest-api/class-wp-rest-server.php(1018): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/beeYouInk/v1/m...', Array, NULL)
+#3 /Users/helvinrymer/Local Sites/beeyouink/app/public/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/helvinrymer/Local Sites/beeyouink/app/public in /Users/helvinrymer/Local Sites/beeyouink/app/public/wp-includes/link-template.php on line 1298
+

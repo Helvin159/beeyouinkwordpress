@@ -2,7 +2,7 @@ import React, { Fragment, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { PageContext } from '../lib/pageContext'
+import { PageContext } from '../lib/PageContext'
 
 const Footer = () => {
 	const { pageData } = useContext(PageContext)

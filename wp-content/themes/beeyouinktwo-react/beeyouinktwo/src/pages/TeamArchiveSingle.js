@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { PageContext } from '../lib/pageContext'
+import { PageContext } from '../lib/PageContext'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 

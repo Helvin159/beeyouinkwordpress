@@ -4,8 +4,6 @@ import Col from 'react-bootstrap/Col'
 import { Link } from 'react-router-dom'
 
 const CartItem = ({ cartItem }) => {
-	let cartItemPrice = cartItem.price * cartItem.quantity
-
 	return (
 		<Fragment>
 			<Row className='py-2 px-3'>
@@ -18,13 +16,15 @@ const CartItem = ({ cartItem }) => {
 						/>
 					</Link>
 				</Col>
-				<Col className='py-3'>
-					<Link className='m-0' to={cartItem.slug}>
-						{cartItem.quantity} X {cartItem.name}
+				<Col className='py-3 col-5'>
+					<Link className='m-0 ' to={cartItem.slug}>
+						{cartItem.name}
 					</Link>
 				</Col>
-				<Col className='col-3 py-3'>
-					<p>${cartItemPrice}</p>
+				<Col className='col-4 py-3'>
+					<p>
+						{cartItem.quantity} &#10005; ${cartItem.price}
+					</p>
 				</Col>
 			</Row>
 		</Fragment>

@@ -10,7 +10,7 @@ const PortfolioGallery = ({ props, limit }) => {
 
 	return (
 		<Fragment>
-			<Row className='max-w-860 mx-auto'>
+			<Row className='max-w-1024 mx-auto'>
 				{props.map((i, k) => {
 					if (limitBy !== null && k <= limitBy) {
 						return (

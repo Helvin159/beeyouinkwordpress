@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { PageContext } from '../lib/pageContext'
+import { PageContext } from '../lib/PageContext'
 import BlogCard from './BlogCard'
 
 const BlogGallery = () => {

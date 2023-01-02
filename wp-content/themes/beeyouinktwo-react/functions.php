@@ -13,7 +13,7 @@ function beeyou_files(){
   // ******* CSS FILES ******************
   // ************************************ 
   // My Style
-  wp_enqueue_style('styles', get_theme_file_uri('./static/css/main.0a00b010.css'));
+  wp_enqueue_style('styles', get_theme_file_uri('./static/css/main.a01da2c3.css'));
   
   // Bootstrap CSS
   wp_enqueue_style('bootstrap', '//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
@@ -22,30 +22,16 @@ function beeyou_files(){
   wp_enqueue_style('slick-slider', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
   wp_enqueue_style('slick-slide-theme', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
 
-  // Font Awesome CSS
-
-
 
   // ************************************ 
   // ******* JS Script ******************
   // ************************************ 
-  // wp_enqueue_script('build-script', get_theme_file_uri('./build/index.js'), NULL,'1.0',true );
-
-  // Font Awesome
-  // wp_enqueue_script('fontawesome-script', get_theme_file_uri('//kit.fontawesome.com/3f2d85e662.js'), NULL,'1.0',false );
-
-  // ************************************ 
-  // ******* Components *****************
-  // ************************************ 
   // Main Script
-  wp_enqueue_script('beeYouData-script', get_theme_file_uri('./static/js/main.8e494209.js'), NULL,'1.0',true );
+  wp_enqueue_script('beeYouData-script', get_theme_file_uri('./static/js/main.27f4a9ab.js'), NULL,'1.0',true );
 
 
   // Bootstrap Scripts
   wp_enqueue_script('bootstrap_script-component-script', '//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js', NULL,'1.0',true );
-  wp_enqueue_script('tiktokscropt', '//www.tiktok.com/embed.js', NULL,'1.0',true );
-
-
 
   wp_localize_script('beeYouData-script','BeeYouData',array(
     'root_url' => get_site_url(),

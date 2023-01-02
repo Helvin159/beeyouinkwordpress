@@ -333,7 +333,8 @@ footer .row {
     width: 100vw; }
     .hero .slick-slider-hero__card {
       position: relative;
-      width: 100vw; }
+      width: 100vw;
+      height: 30vh; }
       .hero .slick-slider-hero__card img {
         height: 100%;
         width: 100%; }
@@ -363,6 +364,12 @@ footer .row {
         .hero .slick-slider-hero__card__text a:hover {
           color: #c50000;
           background-color: white; }
+    @media (min-width: 575px) {
+      .hero .slick-slider-hero__card {
+        height: 55vh; } }
+    @media (min-width: 821px) {
+      .hero .slick-slider-hero__card {
+        height: 70vh; } }
     .hero .slick-slider-hero .slick-next,
     .hero .slick-slider-hero .slick-prev {
       position: absolute;
