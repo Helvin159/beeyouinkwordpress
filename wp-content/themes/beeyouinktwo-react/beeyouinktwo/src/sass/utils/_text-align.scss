@@ -1,0 +1,53 @@
+.text {
+	&-right {
+		text-align: right !important;
+	}
+
+	&-left {
+		text-align: left !important;
+	}
+}
+
+.aligncenter {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.align {
+	&center {
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+@media (max-width: 575px) {
+	.text-xs {
+		&-left {
+			text-align: left !important;
+		}
+
+		&-center {
+			text-align: center !important;
+		}
+
+		&-right {
+			text-align: right !important;
+		}
+	}
+}
+@media (min-width: 768.1px) {
+	.text-sm {
+		&-left {
+			text-align: left !important;
+		}
+
+		&-center {
+			text-align: center !important;
+		}
+
+		&-right {
+			text-align: right !important;
+		}
+	}
+}
+

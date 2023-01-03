@@ -1,0 +1,36 @@
+.font48 {
+	font-size: 48px;
+}
+
+.font {
+	&-24 {
+		font-size: 24px;
+	}
+
+	&-27 {
+		font-size: 27px;
+	}
+
+	&-48 {
+		font-size: 48px;
+	}
+
+	// Colors
+	&-dark-gray {
+		color: rgb(133, 133, 133) !important;
+	}
+
+	&-red {
+		color: $secondaryColor;
+	}
+}
+
+.didot {
+	font-family: $fontFamily;
+
+	&-bold {
+		font-family: $fontFamily;
+		font-weight: 600;
+	}
+}
+

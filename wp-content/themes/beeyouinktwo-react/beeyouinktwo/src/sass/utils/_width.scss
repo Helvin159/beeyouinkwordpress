@@ -1,0 +1,62 @@
+.maxW1024 {
+	max-width: 1024px;
+}
+
+.w {
+	// By viewport width
+	&-100vw {
+		width: 100vw !important;
+	}
+
+	&-95vw {
+		width: 95vw !important;
+	}
+
+	// By Percentage
+	&-100 {
+		width: 100% !important;
+	}
+}
+
+.max-w {
+	&-1024 {
+		max-width: 1024px;
+	}
+
+	&-920 {
+		max-width: 920px;
+	}
+
+	&-860 {
+		max-width: 860px;
+	}
+
+	&-760 {
+		max-width: 760px;
+	}
+
+	&-360 {
+		max-width: 360px;
+	}
+
+	&-260 {
+		max-width: 260px;
+	}
+
+	&-100 {
+		max-width: 100px;
+	}
+
+	&-50 {
+		max-width: 50px;
+	}
+
+	&-40-per {
+		max-width: 40%;
+	}
+
+	&-30-per {
+		max-width: 30%;
+	}
+}
+

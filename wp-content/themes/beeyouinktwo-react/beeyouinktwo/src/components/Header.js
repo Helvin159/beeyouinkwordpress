@@ -17,7 +17,7 @@ function Header() {
 			<header className='navigation'>
 				<Row>
 					<Col sm={3} className='navigation__logo col-xs-12'>
-						<div className='mx-auto text-center pt-3'>
+						<div className='mx-auto text-center py-3'>
 							<Link tabIndex={0} className='display-6 didot' to='/'>
 								BeeYou Ink
 							</Link>
@@ -58,10 +58,10 @@ function Header() {
 							<Col
 								sm={2}
 								className='text-right px-4 navigation__items__links__info'>
-								<div className='pt-2 text-center'>
+								<div className='py-1 text-center'>
 									<button
+										className='btn btn-secondary'
 										tabIndex={0}
-										className='btn btn-primary'
 										onClick={toggleIsCartOpen}>
 										Cart
 									</button>

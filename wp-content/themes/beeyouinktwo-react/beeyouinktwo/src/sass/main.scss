@@ -1,10 +1,6 @@
 // Base
 @import './base/base';
 
-// Utility Media Queries
-@import './base/media-queries-maxW575';
-@import './base/media-queries-minW576';
-
 // Components
 @import './components/header';
 @import './components/footer';
@@ -20,4 +16,17 @@
 @import './components/product-slider';
 @import './components/cart-dropdown';
 @import './components/spinner';
+@import './components/button';
+
+// Utilities
+@import './utils/padding';
+@import './utils/margin';
+@import './utils/height';
+@import './utils/width';
+@import './utils/text-align';
+@import './utils/font';
+@import './utils/line-height';
+@import './utils/overflow';
+@import './utils/columns';
+@import './utils/display';
 

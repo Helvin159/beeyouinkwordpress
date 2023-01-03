@@ -1,0 +1,16 @@
+@media (max-width: 575px) {
+	.d-xs {
+		&-none {
+			display: none !important;
+		}
+
+		&-block {
+			display: block !important;
+		}
+
+		&-flex {
+			display: flex !important;
+		}
+	}
+}
+
