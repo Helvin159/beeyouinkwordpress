@@ -1,46 +1,46 @@
 .btn {
 	width: auto;
 	&-clear {
-		display: block;
-		color: white;
-		transition: $linkTransition;
-		text-transform: uppercase;
-		font-size: 12px;
-		border: 1px solid white;
-		text-align: center;
-		padding: 0.6rem 1.5rem;
-		position: relative;
-		z-index: 1;
+		display: block !important;
+		color: white !important;
+		transition: $linkTransition !important;
+		text-transform: uppercase !important;
+		font-size: 12px !important;
+		border: 1px solid white !important;
+		text-align: center !important;
+		padding: 0.6rem 1.5rem !important;
+		position: relative !important;
+		z-index: 1 !important;
 	}
 
 	&-primary {
-		display: block;
-		color: $altColor;
-		transition: $linkTransition;
-		text-transform: uppercase;
-		font-size: 12px;
-		border: 1px solid $primaryBtnColor;
-		text-align: center;
-		padding: 0.6rem 1.5rem;
-		position: relative;
-		margin: 0 auto;
-		z-index: 1;
-		background-color: $primaryBtnColor;
+		display: block !important;
+		color: $altColor !important;
+		transition: $linkTransition !important;
+		text-transform: uppercase !important;
+		font-size: 12px !important;
+		border: 1px solid $primaryBtnColor !important;
+		text-align: center !important;
+		padding: 0.6rem 1.5rem !important;
+		position: relative !important;
+		margin: 0 auto !important;
+		z-index: 1 !important;
+		background-color: $primaryBtnColor !important;
 	}
 
 	&-secondary {
-		display: block;
-		color: $primaryBtnColor;
-		transition: $linkTransition;
-		text-transform: uppercase;
-		font-size: 12px;
-		border: 1px solid $primaryBtnColor;
-		text-align: center;
-		padding: 0.6rem 1.5rem;
-		position: relative;
-		margin: 0 auto;
-		z-index: 1;
-		background-color: $altColor;
+		display: block !important;
+		color: $primaryBtnColor !important;
+		transition: $linkTransition !important;
+		text-transform: uppercase !important;
+		font-size: 12px !important;
+		border: 1px solid $primaryBtnColor !important;
+		text-align: center !important;
+		padding: 0.6rem 1.5rem !important;
+		position: relative !important;
+		margin: 0 auto !important;
+		z-index: 1 !important;
+		background-color: $altColor !important;
 	}
 
 	// &-primary:hover {
@@ -50,9 +50,9 @@
 	// }
 
 	&-secondary:hover {
-		color: $secondaryColor;
-		background-color: $altColor;
-		border: 1px solid $secondaryColor;
+		color: $secondaryColor !important;
+		background-color: $altColor !important;
+		border: 1px solid $secondaryColor !important;
 	}
 }
 
