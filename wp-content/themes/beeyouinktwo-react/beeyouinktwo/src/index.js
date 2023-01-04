@@ -9,6 +9,7 @@ import { CartProvider } from './lib/CartContext'
 
 import reportWebVitals from './reportWebVitals'
 import './assets/app.css'
+import { DropdownMenuProvider } from './lib/DropdownMenuContext'
 
 const root = ReactDOM.createRoot(document.getElementById('main'))
 
@@ -18,7 +19,9 @@ root.render(
 			<PageProvider>
 				<ProductProvider>
 					<CartProvider>
-						<App />
+						<DropdownMenuProvider>
+							<App />
+						</DropdownMenuProvider>
 					</CartProvider>
 				</ProductProvider>
 			</PageProvider>

@@ -2,25 +2,43 @@ import React, { Fragment, useContext } from 'react'
 import { PageContext } from '../lib/PageContext'
 import { CartContext } from '../lib/CartContext'
 import { Link } from 'react-router-dom'
+import { DropdownMenuContext } from '../lib/DropdownMenuContext'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/esm/Col'
 import CartDropdown from './CartDropdown'
+import CartButton from './CartButton'
+import DropdownMenu from './DropdownMenu'
+import DropdownBtn from './DropdownBtn'
 
 function Header() {
-	const { isCartOpen, setIsCartOpen } = useContext(CartContext)
+	const { isCartOpen } = useContext(CartContext)
 	const { pageData } = useContext(PageContext)
-
-	const toggleIsCartOpen = () => setIsCartOpen(!isCartOpen)
+	const { isDropdownMenuOpen } = useContext(DropdownMenuContext)
 
 	return (
 		<Fragment>
+			{isDropdownMenuOpen && (
+				<style>
+					{`body{
+				height:100vh;
+				overflow:hidden;
+			}`}
+				</style>
+			)}
 			<header className='navigation'>
 				<Row>
-					<Col sm={3} className='navigation__logo col-xs-12'>
+					<Col sm={3} className='navigation__logo  col-xs-9 col-9'>
 						<div className='mx-auto text-center py-3'>
 							<Link tabIndex={0} className='display-6 didot' to='/'>
 								BeeYou Ink
 							</Link>
+						</div>
+					</Col>
+					<Col
+						sm={3}
+						className='navigation__dropdown_btn col-xs-3 d-none d-xs-block'>
+						<div className='mx-auto text-center py-3'>
+							<DropdownBtn />
 						</div>
 					</Col>
 					<Col sm={9} className='navigation__items d-xs-none'>
@@ -29,7 +47,7 @@ function Header() {
 								<Link
 									tabIndex={0}
 									className='navigation__items__contact__item '>
-									Email
+									{pageData.data.email}
 								</Link>
 								<Link
 									tabIndex={0}
@@ -58,20 +76,14 @@ function Header() {
 							<Col
 								sm={2}
 								className='text-right px-4 navigation__items__links__info'>
-								<div className='py-1 text-center'>
-									<button
-										className='btn btn-secondary'
-										tabIndex={0}
-										onClick={toggleIsCartOpen}>
-										Cart
-									</button>
-								</div>
+								<CartButton />
 							</Col>
 						</Row>
 					</Col>
 				</Row>
 			</header>
-			<div>{isCartOpen && <CartDropdown />}</div>
+			{isCartOpen && <CartDropdown />}
+			{isDropdownMenuOpen && <DropdownMenu />}
 		</Fragment>
 	)
 }

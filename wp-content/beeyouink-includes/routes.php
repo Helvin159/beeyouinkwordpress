@@ -20,6 +20,8 @@ function beeYouRoute(){
 }
 
 function beeYouInkData($data){
+    $user_info = get_userdata(1);
+    $user_email = $user_info->user_email;
 
 
 
@@ -77,6 +79,7 @@ function beeYouInkData($data){
         'tattoo_shop_details'=>array(
             'name'=>get_bloginfo(),
             'url' => get_site_url(),
+            'email'=>$user_email,
             'home_page_id'=>$homeId,
             'featured_img' => get_field('featured_image', $homeId)
         ),

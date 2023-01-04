@@ -58,5 +58,13 @@
 	&-30-per {
 		max-width: 30%;
 	}
+
+	@media (max-width: 768px) {
+		&-sm {
+			&-100 {
+				max-width: 100%;
+			}
+		}
+	}
 }
 

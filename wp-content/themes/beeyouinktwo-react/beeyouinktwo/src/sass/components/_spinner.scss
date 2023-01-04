@@ -9,9 +9,12 @@
 		& .fa-spinner {
 			width: 100px;
 			height: 100px;
-			margin: 0 auto;
 			position: absolute;
+			left: 0;
+			right: 0;
 			bottom: 50%;
+			margin-left: auto;
+			margin-right: auto;
 			animation-name: loading-spinner;
 			animation-duration: 1.3s;
 			animation-iteration-count: infinite;

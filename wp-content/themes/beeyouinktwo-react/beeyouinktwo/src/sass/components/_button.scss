@@ -43,6 +43,21 @@
 		background-color: $altColor !important;
 	}
 
+	&-tertiary {
+		display: block !important;
+		color: $primaryBtnColor !important;
+		transition: $linkTransition !important;
+		text-transform: uppercase !important;
+		font-size: 12px !important;
+		border: 1px solid none !important;
+		text-align: center !important;
+		padding: 0.6rem 1.5rem !important;
+		position: relative !important;
+		margin: 0 auto !important;
+		z-index: 1 !important;
+		background-color: $altColor !important;
+	}
+
 	// &-primary:hover {
 	// 	color: $secondaryColor;
 	// 	background-color: $altColor;
@@ -50,6 +65,12 @@
 	// }
 
 	&-secondary:hover {
+		color: $secondaryColor !important;
+		background-color: $altColor !important;
+		border: 1px solid $secondaryColor !important;
+	}
+
+	&-tertiary:hover {
 		color: $secondaryColor !important;
 		background-color: $altColor !important;
 		border: 1px solid $secondaryColor !important;

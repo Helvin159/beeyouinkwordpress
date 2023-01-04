@@ -35,6 +35,7 @@ const App = () => {
 	}, [])
 
 	if (pageData && products) {
+		console.log('rendered')
 		return (
 			<Fragment>
 				<ScrollToTop>
