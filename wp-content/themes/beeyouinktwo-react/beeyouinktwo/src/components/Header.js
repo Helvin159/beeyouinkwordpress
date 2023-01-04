@@ -36,7 +36,7 @@ function Header() {
 					</Col>
 					<Col
 						sm={3}
-						className='navigation__dropdown_btn col-xs-3 d-none d-xs-block'>
+						className='navigation__dropdown_btn col-xs-3 d-xs-bloc d-sm-block d-md-none'>
 						<div className='mx-auto text-center py-3'>
 							<DropdownBtn />
 						</div>

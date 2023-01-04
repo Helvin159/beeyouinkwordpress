@@ -14,3 +14,35 @@
 	}
 }
 
+@media (min-width: 576px) {
+	.d-sm {
+		&-none {
+			display: none !important;
+		}
+
+		&-block {
+			display: block !important;
+		}
+
+		&-flex {
+			display: flex !important;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.d-md {
+		&-none {
+			display: none !important;
+		}
+
+		&-block {
+			display: block !important;
+		}
+
+		&-flex {
+			display: flex !important;
+		}
+	}
+}
+

@@ -807,5 +807,21 @@ footer {
   .d-xs-flex {
     display: flex !important; } }
 
+@media (min-width: 576px) {
+  .d-sm-none {
+    display: none !important; }
+  .d-sm-block {
+    display: block !important; }
+  .d-sm-flex {
+    display: flex !important; } }
+
+@media (min-width: 768px) {
+  .d-md-none {
+    display: none !important; }
+  .d-md-block {
+    display: block !important; }
+  .d-md-flex {
+    display: flex !important; } }
+
 .border-bottom-1 {
   border-bottom: 1px solid #000000; }
