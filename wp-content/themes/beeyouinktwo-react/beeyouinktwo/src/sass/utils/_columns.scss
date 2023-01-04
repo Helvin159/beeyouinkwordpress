@@ -1,28 +1,28 @@
 .col {
 	@media (max-width: 575px) {
 		&-xs-3 {
-			flex: 0 0 auto;
-			width: 25%;
+			flex: 0 0 auto !important;
+			width: 25% !important;
 		}
 
 		&-xs-9 {
-			flex: 0 0 auto;
-			width: 75%;
+			flex: 0 0 auto !important;
+			width: 75% !important;
 		}
 
 		&-xs-10 {
-			flex: 0 0 auto;
-			width: 83.33333333%;
+			flex: 0 0 auto !important;
+			width: 83.33333333% !important;
 		}
 
 		&-xs-11 {
-			flex: 0 0 auto;
-			width: 91.66666667%;
+			flex: 0 0 auto !important;
+			width: 91.66666667% !important;
 		}
 
 		&-xs-12 {
-			flex: 0 0 auto;
-			width: 100%;
+			flex: 0 0 auto !important;
+			width: 100% !important;
 		}
 	}
 }
